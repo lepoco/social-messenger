@@ -15,3 +15,13 @@ All options, description and configuration are available in the Customizer
 - [x] Webhooks
 - [x] Many language versions (coming soon)
 - [x] Integration with PolyLang (coming soon)
+
+## How to install it?
+1. Upload `rd_messenger` folder to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Add your APP ID and Facebook page ID in Customizer
+
+
+### Available full language versions
+- [x] English
+- [x] Polish
