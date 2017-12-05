@@ -2,12 +2,12 @@
 /*
 Plugin Name: Facebook Messenger
 Plugin URI: http://wordpress.org/plugins/rd_messenger/
-Description: A very simple plug-in that facilitates the process of adding facebook messenger to your website
+Description: A very simple plug-in that facilitates the process of adding Facebook Messenger to your website
 Author: Leszek Pomianowski
 Author URI: https://rapiddev.pl/
 License: MIT
 License URI: https://rapiddev.pl/license
-Version: 1.1.0
+Version: 1.2.0
 Text Domain: rd_messenger
 Domain Path: /languages
 */
@@ -24,7 +24,7 @@ Domain Path: /languages
 /* ====================================================================
  * Constant
  * ==================================================================*/
-	define('RD_MESSENGER_VERSION', '1.1.0');
+	define('RD_MESSENGER_VERSION', '1.2.0');
 	define('RD_MESSENGER_PATH', plugin_dir_path( __FILE__ ));
 
 /* ====================================================================
@@ -81,7 +81,7 @@ Domain Path: /languages
 			$wp_customize->add_control('rd_messenger_minimized',array('type'=>'checkbox','priority'=>2,'section'=>'rd_messenger','label'=>__('Minimized (optional)','rd_messenger'),'description'=>__('Specifies whether the plugin should be minimized or shown. Defaults to true on desktop and false on mobile browsers.', 'rd_messenger')));
 			#Add api key setting
 			$wp_customize->add_setting('rd_messenger_api',array('default'=>null,'type'=>'theme_mod','capability'=>'edit_theme_options','transport'=>'refresh'));
-			$wp_customize->add_control('rd_messenger_api',array('type'=>'text','priority'=> 3,'section'=>'rd_messenger','label' => __('API key','rd_messenger'),'description'=>__('Enter your application key here','rd_messenger')));
+			$wp_customize->add_control('rd_messenger_api',array('type'=>'text','priority'=> 3,'section'=>'rd_messenger','label' => __('Api ID','rd_messenger'),'description'=>__('Enter your application id here','rd_messenger')));
 			#Add page id setting
 			$wp_customize->add_setting('rd_messenger_page',array('default'=> null,'type'=>'theme_mod','capability'=>'edit_theme_options','transport'=>'refresh'));
 			$wp_customize->add_control('rd_messenger_page',array('type'=>'text','priority'=>4,'section'=>'rd_messenger','label'=>__('Page ID','rd_messenger'),'description'=>__('Enter your numeric page id here','rd_messenger')));
@@ -90,9 +90,7 @@ Domain Path: /languages
 			$wp_customize->add_control('rd_messenger_webhook',array('type'=>'text','priority'=> 5,'section'=>'rd_messenger','label' => __('Webhook (optional)','rd_messenger'),'description'=>__('Custom string passed to your webhook in messaging_postbacks and messaging_referrals events','rd_messenger')));
 			#Description
 			$wp_customize->add_setting('rd_messenger_html',array('transport' => 'refresh'));
-			$wp_customize->add_control(new rd_messenger_html($wp_customize,'rd_messenger_html',array('section' => 'rd_messenger','priority' => 6,'content' =>
-				'<hr /><a class="button button-secondary" style="width:100%;text-align:center" href="https://developers.facebook.com/docs/messenger-platform/reference/web-plugins/#customer_chat" target="_blank">Facebook Developers</a><p><small>'.__('Facebook and Facebook Messenger are registered trademarks of Facebook Inc.', 'rd_messenger').'</small></p>'
-			)));
+			$wp_customize->add_control(new rd_messenger_html($wp_customize,'rd_messenger_html',array('section' => 'rd_messenger','priority' => 6,'content' =>'<hr /><p><strong>'.__('Important informations', 'rd_messenger').'</strong><br />'.__('You need to add your website to trusted on your fanpage. You can do this in the Messenger Platform tab in the Whitelisted Domains card (fanpage settings page)', 'rd_messenger').'</p><hr /><p><strong>'.__('Where can I get my api key?','rd_messenger').'</strong><br/>'.__('To receive or create an application key you must','rd_messenger').':<ol><li>'.__('Log into', 'rd_messenger').' <a href="https://developers.facebook.com/" target="_blank">Facebook Developers</a></li><li>'.__('Open or create a new application', 'rd_messenger').'</li><li>'.__('On the Settings page you will find your App ID', 'rd_messenger').'</li><li>'.__("Now click the button below 'Add Platform'", 'rd_messenger').'</li><li>'.__("Select 'Website' and then enter the address of this page", 'rd_messenger').'</li></ol></p><hr /><p><strong>'.__('Where can I get my page id?','rd_messenger').'</strong><br/>'.__('To receive your page id you must','rd_messenger').': '.__('Go to your fanpage, ex', 'rd_messenger').': <i><a href="https://fb.com/rapiddev">https://fb.com/rapiddev</a></i> '.__('and try to find it in settings', 'rd_messenger').' '.__('or just', 'rd_messenger').' <a href="https://findmyfbid.com/" target="_blank">'.__('use this tool', 'rd_messenger').'</a></p><hr /><p><a class="button button-primary" style="width:100%;text-align:center" href="https://developers.facebook.com/" target="_blank">Facebook Developers</a></p><p><a class="button button-secondary" style="width:100%;text-align:center" href="https://developers.facebook.com/docs/messenger-platform/reference/web-plugins/#customer_chat" target="_blank">'.__('Documentation Facebook Messenger Site Plugin', 'rd_messenger').'</a><a class="button button-secondary" style="width:100%;text-align:center" href="https://rapiddev.pl/" target="_blank">'.__('The website of the creators of the plugin', 'rd_messenger').'</a></p><p><small>'.__('Facebook and Facebook Messenger are registered trademarks of Facebook Inc.', 'rd_messenger').'</small></p>')));
 		}
 		add_action('customize_register', 'rd_messenger_customizer');
 
