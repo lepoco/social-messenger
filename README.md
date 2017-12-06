@@ -2,6 +2,11 @@
 [Created with love in Poland by RapidDev](http://rapiddev.pl/)<br />
 A very simple plug-in that facilitates the process of adding Facebook Messenger to your website
 
+![Presentation image](https://rapiddev.pl/uploads/2017/12/rd_messenger_for_wordpress.jpg)
+
+
+### [Download the latest version (1.3.2)](https://github.com/RapidDTC/rd_messenger/releases/1.3.2)
+
 ## What does this plugin do?
 It makes it easy for you to add a Facebook Messenger live chat to your WordPress site
 
