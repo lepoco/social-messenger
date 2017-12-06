@@ -24,11 +24,37 @@ All options, description and configuration are available in the Customizer
 - [x] Integration with PolyLang
 
 ## How to install it?
+Method using FTP
 1. Upload `rd_messenger` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Add your APP ID and Facebook page ID in Customizer
 
+Method using Plugins Manager
+1. Go to Dashboard > Plugins > Add new
+2. Select the option to upload to the server
+3. Choose the file rd_messenger.zip
 
-### Available full language versions
+## Available full language versions
 - [x] English
 - [x] Polish
+
+## Update history
+#### 1.3.2
+1. Bug fixes
+2. Translations have been improved
+#### 1.3.1
+1. Bug fixes
+2. The way of displaying the options has been changed
+#### 1.3.0
+1. A new Customizer class has been added
+2. Added support for PolyLang
+3. The ability to change the live chat language has been added
+4. The ability to hide chat on phones has been added
+5. The ability to change the chat position live has been added
+#### 1.2.0
+1. Bug fixes
+2. Addition of new translations
+#### 1.1.0
+1. Bug fixes
+#### 1.0.0
+1. The plugin was created
