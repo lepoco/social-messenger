@@ -25,20 +25,26 @@ All options, description and configuration are available in the Customizer
 
 ## How to install it?
 Method using FTP
-1. Upload `rd_messenger` folder to the `/wp-content/plugins/` directory
+1. Upload `social_messenger` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Add your APP ID and Facebook page ID in Customizer
 
 Method using Plugins Manager
 1. Go to Dashboard > Plugins > Add new
 2. Select the option to upload to the server
-3. Choose the file rd_messenger.zip
+3. Choose the file social_messenger.zip
 
 ## Available full language versions
 - [x] English
 - [x] Polish
 
 ## Update history
+#### 1.3.4
+1. Bug fixes
+#### 1.3.3
+1. Bug fixes
+2. Translations have been improved
+3. Change slug and name of the plugin
 #### 1.3.2
 1. Bug fixes
 2. Translations have been improved
