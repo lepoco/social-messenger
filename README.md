@@ -1,11 +1,11 @@
 # Facebook Messenger for WordPress
 [Created with love in Poland by RapidDev](http://rapiddev.pl/)<br />
-A very simple plug-in that facilitates the process of adding Facebook Messenger to your website
+Facebook Messenger live chat on your website! Very easy to use plugin that adds chat on your WordPress site. It supports language change and is integrated with PolyLang. In addition, you can change the position and display of the chatbox
 
 ![Presentation image](https://rapiddev.pl/uploads/2017/12/rd_messenger_for_wordpress.jpg)
 
 
-### [Download the latest version (1.3.2)](https://github.com/RapidDTC/rd_messenger/releases/1.3.2)
+### [Download the latest version (1.3.5)](https://github.com/RapidDTC/rd_messenger/releases/1.3.5)
 
 ## What does this plugin do?
 It makes it easy for you to add a Facebook Messenger live chat to your WordPress site
@@ -25,7 +25,7 @@ All options, description and configuration are available in the Customizer
 
 ## How to install it?
 Method using FTP
-1. Upload `social_messenger` folder to the `/wp-content/plugins/` directory
+1. Upload `social-messenger` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Add your APP ID and Facebook page ID in Customizer
 
@@ -39,6 +39,8 @@ Method using Plugins Manager
 - [x] Polish
 
 ## Update history
+#### 1.3.5
+1. Bug fixes
 #### 1.3.4
 1. Bug fixes
 #### 1.3.3
