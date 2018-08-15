@@ -42,6 +42,38 @@ Method using Plugins Manager
 - [x] Polish
 
 ## Update history
+#### 2.2.1
+1. Bug fixes
+2. Added more bugs to fix later
+#### 2.2.0
+1. Cosmetic class improvement
+2. Improved detection of WordPress and PHP versions
+3. A completely new customizer registration system
+4. A new way to initialize the plugin
+5. Corrections in translations
+6. Bug fixes
+#### 2.1.2
+1. Bug fixes
+#### 2.1.1
+1. Bug fixes
+#### 2.1.0
+1. Bug fixes
+#### 2.0.0
+1. The entire plugin has been rewritten
+2. The use of OOP techniques
+3. Unnecessary classes have been removed
+4. New error detection method
+5. A new way of displaying error messages for the administrator
+6. The additional 'minimized' option has been improved
+#### 1.4.0
+1. Chat color have been added
+2. FindMyFBId was removed and the tutorial to find the fanpage code was corrected
+3. The way of declaring languages has been changed
+4. Translations have been improved
+5. The definition of some functions has been changed
+6. The identification of errors has been improved
+#### 1.3.6
+1. 'Settings' link has been added on the plugins list page
 #### 1.3.5
 1. Bug fixes
 #### 1.3.4
