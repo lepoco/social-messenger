@@ -22,7 +22,9 @@ All options, description and configuration are available in the Customizer
 - [x] The ability to change the chat language
 - [x] The ability to change the chat position on the site
 - [x] The option to disable chat for the mobile version
-- [x] Integration with PolyLang
+- [x] Single Page mode
+- [x] Change of colors
+- [x] Integration with PolyLang and WPML
 
 ## How to install it?
 Method using FTP
