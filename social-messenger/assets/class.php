@@ -4,7 +4,7 @@
  * @subpackage Facebook Messenger (Live Chat)
  *
  * @author RapidDev | Polish technology company
- * @copyright Copyright (c) 2017, RapidDev
+ * @copyright Copyright (c) 2018, RapidDev
  * @link https://www.rapiddev.pl/en/social-messenger
  * @license https://opensource.org/licenses/MIT
  */

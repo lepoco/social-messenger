@@ -7,7 +7,7 @@ Author: RapidDev | Polish technology company
 Author URI: https://rapiddev.pl/
 License: MIT
 License URI: https://opensource.org/licenses/MIT
-Version: 2.2.1
+Version: 2.2.2
 Text Domain: social_messenger
 Domain Path: /languages
 */
@@ -16,7 +16,7 @@ Domain Path: /languages
  * @subpackage Facebook Messenger (Live Chat)
  *
  * @author RapidDev | Polish technology company
- * @copyright Copyright (c) 2017, RapidDev
+ * @copyright Copyright (c) 2018, RapidDev
  * @link https://www.rapiddev.pl/en/social-messenger
  * @license https://opensource.org/licenses/MIT
  */
@@ -37,3 +37,4 @@ Domain Path: /languages
 		include(RAPIDDEV_SOCIAL_MESSENGER_PATH.'assets/class.php');
 		RAPIDDEV_SOCIAL_MESSENGER::init();
 	}
+?>

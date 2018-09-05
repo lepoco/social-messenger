@@ -86,6 +86,13 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Changelog ==
 
+= 2.2.2 =
+1. Bug fixes
+2. Added more bugs to fix later
+
+= 2.2.1 =
+1. Bug fixes
+
 = 2.2.0 =
 1. Cosmetic class improvement
 2. Improved detection of WordPress and PHP versions
@@ -93,7 +100,6 @@ You must add your site to trusted in the settings of your fanpage.
 4. A new way to initialize the plugin
 5. Corrections in translations
 6. Bug fixes
-7. Added more bugs to fix later
 
 = 2.1.2 =
 1. Bug fixes
@@ -161,15 +167,8 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Upgrade notice ==
 
-= 2.2.0 =
-Attention, no backward compatibility!
-1. Cosmetic class improvement
-2. Improved detection of WordPress and PHP versions
-3. A completely new customizer registration system
-4. A new way to initialize the plugin
-5. Corrections in translations
-6. Bug fixes
-7. Added more bugs to fix later
+= 2.2.2 =
+Attention, no backward compatibility! All new features should work.
 
 == License ==
 Copyright 2018 RapidDev Leszek Pomianowski
