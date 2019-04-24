@@ -6,7 +6,7 @@ Facebook Messenger live chat on your website! Very easy to use plugin that adds 
 
 
 ## [Download from the WordPress repository](https://wordpress.org/plugins/social-messenger/)
-#### [Download the latest version from GitHub (2.2.1)](https://github.com/rapiddev/social-messenger/releases/tag/2.2.1)
+#### [Download the latest version from GitHub (2.3.1)](https://github.com/rapiddev/social-messenger/releases/tag/2.3.1)
 
 ## What does this plugin do?
 It makes it easy for you to add a Facebook Messenger live chat to your WordPress site
@@ -15,10 +15,10 @@ It makes it easy for you to add a Facebook Messenger live chat to your WordPress
 All options, description and configuration are available in the Customizer
 
 ## What options are available?
-- [x] Api ID
 - [x] Page ID
 - [x] Minimizing chat
 - [x] Webhooks
+- [x] Own welcome message for logged in (and not) users
 - [x] The ability to change the chat language
 - [x] The ability to change the chat position on the site
 - [x] The option to disable chat for the mobile version
@@ -42,6 +42,28 @@ Method using Plugins Manager
 - [x] Polish
 
 ## Update history
+#### 2.3.1
+1. An error with the display of the default greeting in Polish has been fixed
+2. Added more bugs to fix later
+#### 2.3.0
+1. Repairing old mistakes
+2. Integration with a newer version of the messenger sdk
+3. Bug fixes
+4. Api key no longer needed
+#### 2.2.8
+1. Bug fixes
+#### 2.2.7
+1. Update of Facebook SDK
+#### 2.2.6
+1. Facebug again accuses us of unlawfully using their name in the banner, so we change it.
+#### 2.2.5
+1. Bug fixes
+#### 2.2.4
+1. Facebug copyright update
+#### 2.2.3
+1. Facebug copyright update
+#### 2.2.2
+1. Bug fixes
 #### 2.2.1
 1. Bug fixes
 2. Added more bugs to fix later
