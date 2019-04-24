@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Facebook Messenger (Live Chat) 2\n"
-"POT-Creation-Date: 2018-08-15 19:12+0200\n"
-"PO-Revision-Date: 2018-08-15 19:13+0200\n"
+"POT-Creation-Date: 2019-04-06 21:41+0200\n"
+"PO-Revision-Date: 2019-04-06 21:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
 "|| n%100>14) ? 1 : 2);\n"
@@ -22,15 +22,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: assets/class.php:128 local-dir/tags/1.2.0/social_messenger.php:100
+#: assets/class.php:174 local-dir/tags/1.2.0/social_messenger.php:100
 #: local-dir/tags/2.1.0/assets/class.php:164
 #: local-dir/tags/2.1.1/assets/class.php:164
 #: local-dir/tags/2.1.2/assets/class.php:164
-#: local-dir/trunk/assets/class.php:164
+#: local-dir/tags/2.2.1/assets/class.php:133
+#: local-dir/tags/2.2.5/assets/class.php:133
+#: local-dir/tags/2.2.6/assets/class.php:161
+#: local-dir/tags/2.3.0/assets/class.php:174
+#: local-dir/trunk/assets/class.php:174
 msgid "Switch on the Facebook Messenger"
 msgstr "Włącz Facebook Messenger"
 
-#: assets/class.php:128 assets/class.php:129 assets/class.php:130
+#: assets/class.php:174 assets/class.php:175 assets/class.php:176
 #: local-dir/tags/1.2.0/social_messenger.php:100
 #: local-dir/tags/1.2.0/social_messenger.php:103
 #: local-dir/tags/1.2.0/social_messenger.php:106
@@ -44,13 +48,25 @@ msgstr "Włącz Facebook Messenger"
 #: local-dir/tags/2.1.2/assets/class.php:164
 #: local-dir/tags/2.1.2/assets/class.php:166
 #: local-dir/tags/2.1.2/assets/class.php:168
-#: local-dir/trunk/assets/class.php:164 local-dir/trunk/assets/class.php:166
-#: local-dir/trunk/assets/class.php:168
+#: local-dir/tags/2.2.1/assets/class.php:133
+#: local-dir/tags/2.2.1/assets/class.php:134
+#: local-dir/tags/2.2.1/assets/class.php:135
+#: local-dir/tags/2.2.5/assets/class.php:133
+#: local-dir/tags/2.2.5/assets/class.php:134
+#: local-dir/tags/2.2.5/assets/class.php:135
+#: local-dir/tags/2.2.6/assets/class.php:161
+#: local-dir/tags/2.2.6/assets/class.php:162
+#: local-dir/tags/2.2.6/assets/class.php:163
+#: local-dir/tags/2.3.0/assets/class.php:174
+#: local-dir/tags/2.3.0/assets/class.php:175
+#: local-dir/tags/2.3.0/assets/class.php:176
+#: local-dir/trunk/assets/class.php:174 local-dir/trunk/assets/class.php:175
+#: local-dir/trunk/assets/class.php:176
 msgid "Enabled"
 msgstr "Włączone"
 
-#: assets/class.php:128 assets/class.php:129 assets/class.php:130
-#: assets/class.php:134 local-dir/tags/1.2.0/social_messenger.php:100
+#: assets/class.php:174 assets/class.php:175 assets/class.php:176
+#: assets/class.php:180 local-dir/tags/1.2.0/social_messenger.php:100
 #: local-dir/tags/1.2.0/social_messenger.php:103
 #: local-dir/tags/1.2.0/social_messenger.php:106
 #: local-dir/tags/1.2.0/social_messenger.php:112
@@ -66,23 +82,47 @@ msgstr "Włączone"
 #: local-dir/tags/2.1.2/assets/class.php:166
 #: local-dir/tags/2.1.2/assets/class.php:168
 #: local-dir/tags/2.1.2/assets/class.php:176
-#: local-dir/trunk/assets/class.php:164 local-dir/trunk/assets/class.php:166
-#: local-dir/trunk/assets/class.php:168 local-dir/trunk/assets/class.php:176
+#: local-dir/tags/2.2.1/assets/class.php:133
+#: local-dir/tags/2.2.1/assets/class.php:134
+#: local-dir/tags/2.2.1/assets/class.php:135
+#: local-dir/tags/2.2.1/assets/class.php:139
+#: local-dir/tags/2.2.5/assets/class.php:133
+#: local-dir/tags/2.2.5/assets/class.php:134
+#: local-dir/tags/2.2.5/assets/class.php:135
+#: local-dir/tags/2.2.5/assets/class.php:139
+#: local-dir/tags/2.2.6/assets/class.php:161
+#: local-dir/tags/2.2.6/assets/class.php:162
+#: local-dir/tags/2.2.6/assets/class.php:163
+#: local-dir/tags/2.2.6/assets/class.php:167
+#: local-dir/tags/2.3.0/assets/class.php:174
+#: local-dir/tags/2.3.0/assets/class.php:175
+#: local-dir/tags/2.3.0/assets/class.php:176
+#: local-dir/tags/2.3.0/assets/class.php:180
+#: local-dir/trunk/assets/class.php:174 local-dir/trunk/assets/class.php:175
+#: local-dir/trunk/assets/class.php:176 local-dir/trunk/assets/class.php:180
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#: assets/class.php:129 local-dir/tags/1.2.0/social_messenger.php:103
+#: assets/class.php:175 local-dir/tags/1.2.0/social_messenger.php:103
 #: local-dir/tags/2.1.0/assets/class.php:166
 #: local-dir/tags/2.1.1/assets/class.php:166
 #: local-dir/tags/2.1.2/assets/class.php:166
-#: local-dir/trunk/assets/class.php:166
+#: local-dir/tags/2.2.1/assets/class.php:134
+#: local-dir/tags/2.2.5/assets/class.php:134
+#: local-dir/tags/2.2.6/assets/class.php:162
+#: local-dir/tags/2.3.0/assets/class.php:175
+#: local-dir/trunk/assets/class.php:175
 msgid "Minimized (optional)"
 msgstr "Zminimalizowany (opcjonalne)"
 
-#: assets/class.php:129 local-dir/tags/2.1.0/assets/class.php:166
+#: assets/class.php:175 local-dir/tags/2.1.0/assets/class.php:166
 #: local-dir/tags/2.1.1/assets/class.php:166
 #: local-dir/tags/2.1.2/assets/class.php:166
-#: local-dir/trunk/assets/class.php:166
+#: local-dir/tags/2.2.1/assets/class.php:134
+#: local-dir/tags/2.2.5/assets/class.php:134
+#: local-dir/tags/2.2.6/assets/class.php:162
+#: local-dir/tags/2.3.0/assets/class.php:175
+#: local-dir/trunk/assets/class.php:175
 msgid ""
 "Specifies whether the plugin should be minimized or shown. Defaults to true "
 "on desktop and false on mobile browsers."
@@ -90,110 +130,166 @@ msgstr ""
 "Określa, czy czat powinien być zminimalizowany czy pokazany. Domyślnie "
 "włączony na komputerach i wyłączony na telefonach."
 
-#: assets/class.php:129 local-dir/tags/2.1.0/assets/class.php:166
+#: assets/class.php:175 local-dir/tags/2.1.0/assets/class.php:166
 #: local-dir/tags/2.1.1/assets/class.php:166
 #: local-dir/tags/2.1.2/assets/class.php:166
-#: local-dir/trunk/assets/class.php:166
+#: local-dir/tags/2.2.1/assets/class.php:134
+#: local-dir/tags/2.2.5/assets/class.php:134
+#: local-dir/tags/2.2.6/assets/class.php:162
+#: local-dir/tags/2.3.0/assets/class.php:175
+#: local-dir/trunk/assets/class.php:175
 msgid "Default"
 msgstr "Domyślne"
 
-#: assets/class.php:130 local-dir/tags/1.2.0/social_messenger.php:106
+#: assets/class.php:176 local-dir/tags/1.2.0/social_messenger.php:106
 #: local-dir/tags/2.1.0/assets/class.php:168
 #: local-dir/tags/2.1.1/assets/class.php:168
 #: local-dir/tags/2.1.2/assets/class.php:168
-#: local-dir/trunk/assets/class.php:168
+#: local-dir/tags/2.2.1/assets/class.php:135
+#: local-dir/tags/2.2.5/assets/class.php:135
+#: local-dir/tags/2.2.6/assets/class.php:163
+#: local-dir/tags/2.3.0/assets/class.php:176
+#: local-dir/trunk/assets/class.php:176
 msgid "Turn off live chat on phones"
 msgstr "Wyłącz na telefonach"
 
-#: assets/class.php:130 local-dir/tags/2.1.0/assets/class.php:168
+#: assets/class.php:176 local-dir/tags/2.1.0/assets/class.php:168
 #: local-dir/tags/2.1.1/assets/class.php:168
 #: local-dir/tags/2.1.2/assets/class.php:168
-#: local-dir/trunk/assets/class.php:168
+#: local-dir/tags/2.2.1/assets/class.php:135
+#: local-dir/tags/2.2.5/assets/class.php:135
+#: local-dir/tags/2.2.6/assets/class.php:163
+#: local-dir/tags/2.3.0/assets/class.php:176
+#: local-dir/trunk/assets/class.php:176
 msgid "Forces hiding live chat with CSS."
 msgstr "Wymuś ukrycie czatu przy pomocy CSS."
 
-#: assets/class.php:131 local-dir/tags/1.2.0/social_messenger.php:118
+#: assets/class.php:177 local-dir/tags/1.2.0/social_messenger.php:118
 #: local-dir/tags/2.1.0/assets/class.php:170
 #: local-dir/tags/2.1.1/assets/class.php:170
 #: local-dir/tags/2.1.2/assets/class.php:170
-#: local-dir/trunk/assets/class.php:170
+#: local-dir/tags/2.2.1/assets/class.php:136
+#: local-dir/tags/2.2.5/assets/class.php:136
+#: local-dir/tags/2.2.6/assets/class.php:164
+#: local-dir/tags/2.3.0/assets/class.php:177
+#: local-dir/trunk/assets/class.php:177
 msgid "Chat position on the page"
 msgstr "Pozycja czatu na stronie"
 
-#: assets/class.php:131 local-dir/tags/2.1.0/assets/class.php:170
+#: assets/class.php:177 local-dir/tags/2.1.0/assets/class.php:170
 #: local-dir/tags/2.1.1/assets/class.php:170
 #: local-dir/tags/2.1.2/assets/class.php:170
-#: local-dir/trunk/assets/class.php:170
+#: local-dir/tags/2.2.1/assets/class.php:136
+#: local-dir/tags/2.2.5/assets/class.php:136
+#: local-dir/tags/2.2.6/assets/class.php:164
+#: local-dir/tags/2.3.0/assets/class.php:177
+#: local-dir/trunk/assets/class.php:177
 msgid "Forces a change of position based on CSS."
 msgstr "Wymusza zmianę pozycji na podstawie CSS."
 
-#: assets/class.php:131 local-dir/tags/1.2.0/social_messenger.php:118
+#: assets/class.php:177 local-dir/tags/1.2.0/social_messenger.php:118
 #: local-dir/tags/2.1.0/assets/class.php:170
 #: local-dir/tags/2.1.1/assets/class.php:170
 #: local-dir/tags/2.1.2/assets/class.php:170
-#: local-dir/trunk/assets/class.php:170
+#: local-dir/tags/2.2.1/assets/class.php:136
+#: local-dir/tags/2.2.5/assets/class.php:136
+#: local-dir/tags/2.2.6/assets/class.php:164
+#: local-dir/tags/2.3.0/assets/class.php:177
+#: local-dir/trunk/assets/class.php:177
 msgid "On the right side"
 msgstr "Po prawej stronie"
 
-#: assets/class.php:131 local-dir/tags/1.2.0/social_messenger.php:118
+#: assets/class.php:177 local-dir/tags/1.2.0/social_messenger.php:118
 #: local-dir/tags/2.1.0/assets/class.php:170
 #: local-dir/tags/2.1.1/assets/class.php:170
 #: local-dir/tags/2.1.2/assets/class.php:170
-#: local-dir/trunk/assets/class.php:170
+#: local-dir/tags/2.2.1/assets/class.php:136
+#: local-dir/tags/2.2.5/assets/class.php:136
+#: local-dir/tags/2.2.6/assets/class.php:164
+#: local-dir/tags/2.3.0/assets/class.php:177
+#: local-dir/trunk/assets/class.php:177
 msgid "On the left side"
 msgstr "Po lewej stronie"
 
-#: assets/class.php:131 local-dir/tags/1.2.0/social_messenger.php:118
+#: assets/class.php:177 local-dir/tags/1.2.0/social_messenger.php:118
 #: local-dir/tags/2.1.0/assets/class.php:170
 #: local-dir/tags/2.1.1/assets/class.php:170
 #: local-dir/tags/2.1.2/assets/class.php:170
-#: local-dir/trunk/assets/class.php:170
+#: local-dir/tags/2.2.1/assets/class.php:136
+#: local-dir/tags/2.2.5/assets/class.php:136
+#: local-dir/tags/2.2.6/assets/class.php:164
+#: local-dir/tags/2.3.0/assets/class.php:177
+#: local-dir/trunk/assets/class.php:177
 msgid "In the middle"
 msgstr "Na środku"
 
-#: assets/class.php:132 local-dir/tags/1.2.0/social_messenger.php:109
+#: assets/class.php:178 local-dir/tags/1.2.0/social_messenger.php:109
 #: local-dir/tags/2.1.0/assets/class.php:172
 #: local-dir/tags/2.1.1/assets/class.php:172
 #: local-dir/tags/2.1.2/assets/class.php:172
-#: local-dir/trunk/assets/class.php:172
+#: local-dir/tags/2.2.1/assets/class.php:137
+#: local-dir/tags/2.2.5/assets/class.php:137
+#: local-dir/tags/2.2.6/assets/class.php:165
+#: local-dir/tags/2.3.0/assets/class.php:178
+#: local-dir/trunk/assets/class.php:178
 msgid "Theme color"
 msgstr "Kolor motywu"
 
-#: assets/class.php:132 local-dir/tags/2.1.0/assets/class.php:172
+#: assets/class.php:178 local-dir/tags/2.1.0/assets/class.php:172
 #: local-dir/tags/2.1.1/assets/class.php:172
 #: local-dir/tags/2.1.2/assets/class.php:172
-#: local-dir/trunk/assets/class.php:172
+#: local-dir/tags/2.2.1/assets/class.php:137
+#: local-dir/tags/2.2.5/assets/class.php:137
+#: local-dir/tags/2.2.6/assets/class.php:165
+#: local-dir/tags/2.3.0/assets/class.php:178
+#: local-dir/trunk/assets/class.php:178
 msgid "This option will change the color of the main button and chat color."
 msgstr "Ta opcja spowoduje zmianę koloru przycisku głównego oraz czatu."
 
-#: assets/class.php:133 local-dir/tags/1.2.0/social_messenger.php:115
+#: assets/class.php:179 local-dir/tags/1.2.0/social_messenger.php:115
 #: local-dir/tags/2.1.0/assets/class.php:174
 #: local-dir/tags/2.1.1/assets/class.php:174
 #: local-dir/tags/2.1.2/assets/class.php:174
-#: local-dir/trunk/assets/class.php:174
+#: local-dir/tags/2.2.1/assets/class.php:138
+#: local-dir/tags/2.2.5/assets/class.php:138
+#: local-dir/tags/2.2.6/assets/class.php:166
+#: local-dir/tags/2.3.0/assets/class.php:179
+#: local-dir/trunk/assets/class.php:179
 msgid "Language"
 msgstr "Język"
 
-#: assets/class.php:133 local-dir/tags/2.1.0/assets/class.php:174
+#: assets/class.php:179 local-dir/tags/2.1.0/assets/class.php:174
 #: local-dir/tags/2.1.1/assets/class.php:174
 #: local-dir/tags/2.1.2/assets/class.php:174
-#: local-dir/trunk/assets/class.php:174
+#: local-dir/tags/2.2.1/assets/class.php:138
+#: local-dir/tags/2.2.5/assets/class.php:138
+#: local-dir/tags/2.2.6/assets/class.php:166
+#: local-dir/tags/2.3.0/assets/class.php:179
+#: local-dir/trunk/assets/class.php:179
 msgid ""
 "The list of languages has been established on the basis of Facebook "
 "Documentation."
 msgstr "Lista języków została ustalona na podstawie Dokumentacji Facebooka."
 
-#: assets/class.php:134 local-dir/tags/2.1.0/assets/class.php:176
+#: assets/class.php:180 local-dir/tags/2.1.0/assets/class.php:176
 #: local-dir/tags/2.1.1/assets/class.php:176
 #: local-dir/tags/2.1.2/assets/class.php:176
-#: local-dir/trunk/assets/class.php:176
+#: local-dir/tags/2.2.1/assets/class.php:139
+#: local-dir/tags/2.2.5/assets/class.php:139
+#: local-dir/tags/2.2.6/assets/class.php:167
+#: local-dir/tags/2.3.0/assets/class.php:180
+#: local-dir/trunk/assets/class.php:180
 msgid "Integration"
 msgstr "Integracja"
 
-#: assets/class.php:134 local-dir/tags/2.1.0/assets/class.php:176
+#: assets/class.php:180 local-dir/tags/2.1.0/assets/class.php:176
 #: local-dir/tags/2.1.1/assets/class.php:176
 #: local-dir/tags/2.1.2/assets/class.php:176
-#: local-dir/trunk/assets/class.php:176
+#: local-dir/tags/2.2.1/assets/class.php:139
+#: local-dir/tags/2.2.5/assets/class.php:139
+#: local-dir/tags/2.2.6/assets/class.php:167
+#: local-dir/tags/2.3.0/assets/class.php:180
+#: local-dir/trunk/assets/class.php:180
 msgid ""
 "Choose the multilingual plugin that you have installed. WPML does not always "
 "work [*sad pepe*]"
@@ -201,17 +297,50 @@ msgstr ""
 "Wybierz wielojęzyczną wtyczkę, którą zainstalowałeś. WPML nie zawsze działa "
 "[*sad pepe*]"
 
-#: assets/class.php:135 local-dir/tags/2.1.0/assets/class.php:178
+#: assets/class.php:181 local-dir/tags/2.2.6/assets/class.php:168
+#: local-dir/tags/2.3.0/assets/class.php:181
+#: local-dir/trunk/assets/class.php:181
+msgid "Greeting text (logged in users)"
+msgstr "Wiadomość powitalna (dla zalogowanych)"
+
+#: assets/class.php:181 assets/class.php:182
+#: local-dir/tags/2.2.6/assets/class.php:168
+#: local-dir/tags/2.2.6/assets/class.php:169
+#: local-dir/tags/2.3.0/assets/class.php:181
+#: local-dir/tags/2.3.0/assets/class.php:182
+#: local-dir/trunk/assets/class.php:181 local-dir/trunk/assets/class.php:182
+msgid ""
+"Automatically registers as a PolyLang string, you can translate it in the "
+"settings."
+msgstr ""
+"Automatycznie rejestruje tekst jako ciąg w PolyLang, dzięki czemu łatwo go "
+"przetłumaczysz w ustawieniach."
+
+#: assets/class.php:182 local-dir/tags/2.2.6/assets/class.php:169
+#: local-dir/tags/2.3.0/assets/class.php:182
+#: local-dir/trunk/assets/class.php:182
+msgid "Greeting text (logged out users)"
+msgstr "Wiadomość powitalna (dla niezalogowanych)"
+
+#: assets/class.php:183 local-dir/tags/2.1.0/assets/class.php:178
 #: local-dir/tags/2.1.1/assets/class.php:178
 #: local-dir/tags/2.1.2/assets/class.php:178
-#: local-dir/trunk/assets/class.php:178
+#: local-dir/tags/2.2.1/assets/class.php:140
+#: local-dir/tags/2.2.5/assets/class.php:140
+#: local-dir/tags/2.2.6/assets/class.php:170
+#: local-dir/tags/2.3.0/assets/class.php:183
+#: local-dir/trunk/assets/class.php:183
 msgid "Single page mode"
 msgstr "Tryb pojedynczej strony"
 
-#: assets/class.php:135 local-dir/tags/2.1.0/assets/class.php:178
+#: assets/class.php:183 local-dir/tags/2.1.0/assets/class.php:178
 #: local-dir/tags/2.1.1/assets/class.php:178
 #: local-dir/tags/2.1.2/assets/class.php:178
-#: local-dir/trunk/assets/class.php:178
+#: local-dir/tags/2.2.1/assets/class.php:140
+#: local-dir/tags/2.2.5/assets/class.php:140
+#: local-dir/tags/2.2.6/assets/class.php:170
+#: local-dir/tags/2.3.0/assets/class.php:183
+#: local-dir/trunk/assets/class.php:183
 msgid ""
 "If you choose one of these options, the plugin will only be displayed on the "
 "selected page."
@@ -219,56 +348,63 @@ msgstr ""
 "Jeśli wybierzesz jedną z tych opcji, wtyczka będzie wyświetlana tylko na "
 "wybranej stronie."
 
-#: assets/class.php:136 local-dir/tags/1.2.0/social_messenger.php:121
-#: local-dir/tags/2.1.0/assets/class.php:180
-#: local-dir/tags/2.1.1/assets/class.php:180
-#: local-dir/tags/2.1.2/assets/class.php:180
-#: local-dir/trunk/assets/class.php:180
-msgid "Api ID"
-msgstr "Identyfikator aplikacji (Api ID)"
-
-#: assets/class.php:136 local-dir/tags/2.1.0/assets/class.php:180
-#: local-dir/tags/2.1.1/assets/class.php:180
-#: local-dir/tags/2.1.2/assets/class.php:180
-#: local-dir/trunk/assets/class.php:180
-msgid "Enter your application id here."
-msgstr "Wpisz tutaj id swojej aplikacji."
-
-#: assets/class.php:136 assets/class.php:137
-#: local-dir/tags/2.1.0/assets/class.php:180
-#: local-dir/tags/2.1.0/assets/class.php:182
-#: local-dir/tags/2.1.1/assets/class.php:180
-#: local-dir/tags/2.1.1/assets/class.php:182
-#: local-dir/tags/2.1.2/assets/class.php:180
-#: local-dir/tags/2.1.2/assets/class.php:182
-#: local-dir/trunk/assets/class.php:180 local-dir/trunk/assets/class.php:182
-msgid "e.g"
-msgstr "np."
-
-#: assets/class.php:137 local-dir/tags/1.2.0/social_messenger.php:124
+#: assets/class.php:184 local-dir/tags/1.2.0/social_messenger.php:124
 #: local-dir/tags/2.1.0/assets/class.php:182
 #: local-dir/tags/2.1.1/assets/class.php:182
 #: local-dir/tags/2.1.2/assets/class.php:182
-#: local-dir/trunk/assets/class.php:182
+#: local-dir/tags/2.2.1/assets/class.php:142
+#: local-dir/tags/2.2.5/assets/class.php:142
+#: local-dir/tags/2.2.6/assets/class.php:172
+#: local-dir/tags/2.3.0/assets/class.php:184
+#: local-dir/trunk/assets/class.php:184
 msgid "Page ID"
 msgstr "Identyfikator strony"
 
-#: assets/class.php:137
+#: assets/class.php:184 local-dir/tags/2.2.1/assets/class.php:142
+#: local-dir/tags/2.2.5/assets/class.php:142
+#: local-dir/tags/2.2.6/assets/class.php:172
+#: local-dir/tags/2.3.0/assets/class.php:184
+#: local-dir/trunk/assets/class.php:184
 msgid "Enter your numeric fanpage id here."
 msgstr "Wpisz tutaj swój numeryczny identyfikator fanpage."
 
-#: assets/class.php:138 local-dir/tags/1.2.0/social_messenger.php:127
+#: assets/class.php:184 local-dir/tags/2.1.0/assets/class.php:180
+#: local-dir/tags/2.1.0/assets/class.php:182
+#: local-dir/tags/2.1.1/assets/class.php:180
+#: local-dir/tags/2.1.1/assets/class.php:182
+#: local-dir/tags/2.1.2/assets/class.php:180
+#: local-dir/tags/2.1.2/assets/class.php:182
+#: local-dir/tags/2.2.1/assets/class.php:141
+#: local-dir/tags/2.2.1/assets/class.php:142
+#: local-dir/tags/2.2.5/assets/class.php:141
+#: local-dir/tags/2.2.5/assets/class.php:142
+#: local-dir/tags/2.2.6/assets/class.php:171
+#: local-dir/tags/2.2.6/assets/class.php:172
+#: local-dir/tags/2.3.0/assets/class.php:184
+#: local-dir/trunk/assets/class.php:184
+msgid "e.g"
+msgstr "np."
+
+#: assets/class.php:185 local-dir/tags/1.2.0/social_messenger.php:127
 #: local-dir/tags/2.1.0/assets/class.php:184
 #: local-dir/tags/2.1.1/assets/class.php:184
 #: local-dir/tags/2.1.2/assets/class.php:184
-#: local-dir/trunk/assets/class.php:184
+#: local-dir/tags/2.2.1/assets/class.php:143
+#: local-dir/tags/2.2.5/assets/class.php:143
+#: local-dir/tags/2.2.6/assets/class.php:173
+#: local-dir/tags/2.3.0/assets/class.php:185
+#: local-dir/trunk/assets/class.php:185
 msgid "Webhook (optional)"
 msgstr "Webhook (opcjonalne)"
 
-#: assets/class.php:138 local-dir/tags/2.1.0/assets/class.php:184
+#: assets/class.php:185 local-dir/tags/2.1.0/assets/class.php:184
 #: local-dir/tags/2.1.1/assets/class.php:184
 #: local-dir/tags/2.1.2/assets/class.php:184
-#: local-dir/trunk/assets/class.php:184
+#: local-dir/tags/2.2.1/assets/class.php:143
+#: local-dir/tags/2.2.5/assets/class.php:143
+#: local-dir/tags/2.2.6/assets/class.php:173
+#: local-dir/tags/2.3.0/assets/class.php:185
+#: local-dir/trunk/assets/class.php:185
 msgid ""
 "Custom string passed to your webhook in messaging_postbacks and "
 "messaging_referrals events."
@@ -276,17 +412,26 @@ msgstr ""
 "Niestandardowy ciąg znaków przekazany do twojej aplikacji w zdarzeniach typu "
 "messaging_postbacks i messaging_referrals."
 
-#: assets/class.php:162 local-dir/tags/1.2.0/social_messenger.php:185
+#: assets/class.php:210 local-dir/tags/1.2.0/social_messenger.php:185
 #: local-dir/tags/2.1.0/assets/class.php:98
 #: local-dir/tags/2.1.1/assets/class.php:98
-#: local-dir/tags/2.1.2/assets/class.php:98 local-dir/trunk/assets/class.php:98
+#: local-dir/tags/2.1.2/assets/class.php:98
+#: local-dir/tags/2.2.1/assets/class.php:167
+#: local-dir/tags/2.2.5/assets/class.php:167
+#: local-dir/tags/2.2.6/assets/class.php:198
+#: local-dir/tags/2.3.0/assets/class.php:210
+#: local-dir/trunk/assets/class.php:210
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: assets/class.php:172 local-dir/tags/2.1.0/assets/class.php:146
+#: assets/class.php:220 local-dir/tags/2.1.0/assets/class.php:146
 #: local-dir/tags/2.1.1/assets/class.php:146
 #: local-dir/tags/2.1.2/assets/class.php:146
-#: local-dir/trunk/assets/class.php:146
+#: local-dir/tags/2.2.1/assets/class.php:177
+#: local-dir/tags/2.2.5/assets/class.php:177
+#: local-dir/tags/2.2.6/assets/class.php:208
+#: local-dir/tags/2.3.0/assets/class.php:220
+#: local-dir/trunk/assets/class.php:220
 #, php-format
 msgid ""
 "Your PHP version is outdated. Please, upgrade your PHP to a higher or equal "
@@ -295,10 +440,14 @@ msgstr ""
 "Twoja wersja PHP jest przestarzała. Proszę, zaktualizuj swoje PHP do wersji "
 "wyższej lub równej %s."
 
-#: assets/class.php:175 local-dir/tags/2.1.0/assets/class.php:149
+#: assets/class.php:223 local-dir/tags/2.1.0/assets/class.php:149
 #: local-dir/tags/2.1.1/assets/class.php:149
 #: local-dir/tags/2.1.2/assets/class.php:149
-#: local-dir/trunk/assets/class.php:149
+#: local-dir/tags/2.2.1/assets/class.php:180
+#: local-dir/tags/2.2.5/assets/class.php:180
+#: local-dir/tags/2.2.6/assets/class.php:211
+#: local-dir/tags/2.3.0/assets/class.php:223
+#: local-dir/trunk/assets/class.php:223
 #, php-format
 msgid ""
 "Your WordPress version is outdated. Please, upgrade your WordPress to a "
@@ -307,10 +456,14 @@ msgstr ""
 "Twoja wersja WordPress  jest przestarzała. Proszę, zaktualizuj swojego "
 "WordPressa do wersji wyższej lub równej %s."
 
-#: assets/class.php:178 local-dir/tags/2.1.0/assets/class.php:152
+#: assets/class.php:226 local-dir/tags/2.1.0/assets/class.php:152
 #: local-dir/tags/2.1.1/assets/class.php:152
 #: local-dir/tags/2.1.2/assets/class.php:152
-#: local-dir/trunk/assets/class.php:152
+#: local-dir/tags/2.2.1/assets/class.php:183
+#: local-dir/tags/2.2.5/assets/class.php:183
+#: local-dir/tags/2.2.6/assets/class.php:214
+#: local-dir/tags/2.3.0/assets/class.php:226
+#: local-dir/trunk/assets/class.php:226
 msgid "There was an unidentified error. We should look deeper..."
 msgstr "Pojawił się niezidentyfikowany błąd. Powinniśmy zajrzeć głębiej..."
 
@@ -327,10 +480,8 @@ msgid "Forces hiding live chat with CSS"
 msgstr "Wymuś ukrycie czatu przy pomocy CSS."
 
 #: local-dir/tags/1.2.0/social_messenger.php:109
-#, fuzzy
-#| msgid "This option will change the color of the main button and chat color."
 msgid "This option will change the color of the main button and chat color"
-msgstr "Ta opcja spowoduje zmianę koloru przycisku głównego oraz czatu."
+msgstr "Ta opcja spowoduje zmianę koloru przycisku głównego oraz czatu"
 
 #: local-dir/tags/1.2.0/social_messenger.php:112
 msgid "Integration with PolyLang"
@@ -341,50 +492,48 @@ msgid ""
 "If integration is enabled, it will work regardless of the language setting "
 "below"
 msgstr ""
+"Jeśli integracja jest włączona, język będzie ustawiany automatycznie "
+"niezależnie od zmian poniżej"
 
 #: local-dir/tags/1.2.0/social_messenger.php:115
-#, fuzzy
-#| msgid ""
-#| "The list of languages has been established on the basis of Facebook "
-#| "Documentation."
 msgid ""
 "The list of languages has been established on the basis of Facebook "
 "Documentation"
-msgstr "Lista języków została ustalona na podstawie Dokumentacji Facebooka."
+msgstr "Lista języków została ustalona na podstawie Dokumentacji Facebooka"
 
 #: local-dir/tags/1.2.0/social_messenger.php:118
-#, fuzzy
-#| msgid "Forces a change of position based on CSS."
 msgid "Forces a change of position based on CSS"
-msgstr "Wymusza zmianę pozycji na podstawie CSS."
+msgstr "Wymusza zmianę pozycji na podstawie CSS"
 
 #: local-dir/tags/1.2.0/social_messenger.php:121
-#, fuzzy
-#| msgid "Enter your application id here."
+#: local-dir/tags/2.1.0/assets/class.php:180
+#: local-dir/tags/2.1.1/assets/class.php:180
+#: local-dir/tags/2.1.2/assets/class.php:180
+#: local-dir/tags/2.2.1/assets/class.php:141
+#: local-dir/tags/2.2.5/assets/class.php:141
+#: local-dir/tags/2.2.6/assets/class.php:171
+msgid "Api ID"
+msgstr "Identyfikator aplikacji (Api ID)"
+
+#: local-dir/tags/1.2.0/social_messenger.php:121
 msgid "Enter your application id here"
-msgstr "Wpisz tutaj id swojej aplikacji."
+msgstr "Wpisz tutaj id swojej aplikacji"
 
 #: local-dir/tags/1.2.0/social_messenger.php:124
-#, fuzzy
-#| msgid "Enter your numeric page id here."
 msgid "Enter your numeric page id here"
-msgstr "Wpisz tutaj swój numeryczny identyfikator strony społecznościowej."
+msgstr "Wpisz tutaj swój numeryczny identyfikator strony społecznościowej"
 
 #: local-dir/tags/1.2.0/social_messenger.php:127
-#, fuzzy
-#| msgid ""
-#| "Custom string passed to your webhook in messaging_postbacks and "
-#| "messaging_referrals events."
 msgid ""
 "Custom string passed to your webhook in messaging_postbacks and "
 "messaging_referrals events"
 msgstr ""
 "Niestandardowy ciąg znaków przekazany do twojej aplikacji w zdarzeniach typu "
-"messaging_postbacks i messaging_referrals."
+"messaging_postbacks i messaging_referrals"
 
 #: local-dir/tags/1.2.0/social_messenger.php:130
 msgid "Important informations"
-msgstr ""
+msgstr "Ważne informacje"
 
 #: local-dir/tags/1.2.0/social_messenger.php:130
 msgid ""
@@ -395,15 +544,15 @@ msgstr ""
 
 #: local-dir/tags/1.2.0/social_messenger.php:130
 msgid "Where can I get my api key?"
-msgstr ""
+msgstr "Gdzie mogę znaleźć mój klucz aplikacji?"
 
 #: local-dir/tags/1.2.0/social_messenger.php:130
 msgid "To receive or create an application key you must"
-msgstr ""
+msgstr "Aby "
 
 #: local-dir/tags/1.2.0/social_messenger.php:130
 msgid "Log into"
-msgstr ""
+msgstr "Zaloguj się do"
 
 #: local-dir/tags/1.2.0/social_messenger.php:130
 msgid "Open or create a new application"
@@ -449,11 +598,13 @@ msgstr ""
 msgid ""
 "Facebook and Facebook Messenger are registered trademarks of Facebook Inc."
 msgstr ""
+"Facebook oraz Facebook Messenger są zarejestrowanymi znakami towarowymi "
+"Facebook Inc."
 
 #: local-dir/tags/1.2.0/social_messenger.php:197
 #: local-dir/tags/1.2.0/social_messenger.php:210
 msgid "ERROR"
-msgstr ""
+msgstr "BŁĄD"
 
 #: local-dir/tags/1.2.0/social_messenger.php:197
 #: local-dir/tags/1.2.0/social_messenger.php:210
@@ -463,28 +614,36 @@ msgstr ""
 #: local-dir/tags/1.2.0/social_messenger.php:197
 #: local-dir/tags/1.2.0/social_messenger.php:210
 msgid "requires at least"
-msgstr ""
+msgstr "wymaga co najmniej"
 
 #: local-dir/tags/1.2.0/social_messenger.php:197
 #: local-dir/tags/1.2.0/social_messenger.php:210
 msgid "You need to update your WordPress site"
-msgstr ""
+msgstr "Musisz zaktualizować swojego WordPress'a"
 
 #: local-dir/tags/1.2.0/social_messenger.php:197
 #: local-dir/tags/1.2.0/social_messenger.php:210
 msgid "ERROR ID"
-msgstr ""
+msgstr "KOD BŁĘDU"
+
+#: local-dir/tags/2.1.0/assets/class.php:180
+#: local-dir/tags/2.1.1/assets/class.php:180
+#: local-dir/tags/2.1.2/assets/class.php:180
+#: local-dir/tags/2.2.1/assets/class.php:141
+#: local-dir/tags/2.2.5/assets/class.php:141
+#: local-dir/tags/2.2.6/assets/class.php:171
+msgid "Enter your application id here."
+msgstr "Wpisz tutaj id swojej aplikacji."
 
 #: local-dir/tags/2.1.0/assets/class.php:182
 #: local-dir/tags/2.1.1/assets/class.php:182
 #: local-dir/tags/2.1.2/assets/class.php:182
-#: local-dir/trunk/assets/class.php:182
 msgid "Enter your numeric page id here."
 msgstr "Wpisz tutaj swój numeryczny identyfikator strony społecznościowej."
 
 #. Plugin Name of the plugin/theme
-msgid "Facebook Messenger (Live Chat)"
-msgstr "Facebook Messenger (czat na żywo)"
+msgid "Live Chat (Messenger API)"
+msgstr "Czat na żywo (Messenger API)"
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/plugins/social-messenger/"
@@ -503,8 +662,11 @@ msgid "RapidDev | Polish technology company"
 msgstr "RapidDev | Polska firma technologiczna"
 
 #. Author URI of the plugin/theme
-msgid "https://rapiddev.pl/"
-msgstr "https://rapiddev.pl/"
+msgid "https://rapiddev.pl/en/"
+msgstr "https://rapiddev.pl/pl/"
+
+#~ msgid "Facebook Messenger (Live Chat)"
+#~ msgstr "Facebook Messenger (czat na żywo)"
 
 #~ msgid ""
 #~ "Facebook Messenger live chat on your website! Very easy to use plugin "

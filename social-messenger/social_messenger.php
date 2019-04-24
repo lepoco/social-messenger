@@ -1,19 +1,19 @@
 <?php
 /*
-Plugin Name: Facebook Messenger (Live Chat)
+Plugin Name: Live Chat (Messenger API)
 Plugin URI: http://wordpress.org/plugins/social-messenger/
 Description: Facebook Messenger on your website. Modify colors, choose languages, integrate with PolyLang, change positions and much more... It's easy!
-Author: RapidDev | Polish technology company
-Author URI: https://rapiddev.pl/
+Author: RapidDev
+Author URI: https://rapiddev.pl/en/
 License: MIT
 License URI: https://opensource.org/licenses/MIT
-Version: 2.2.2
+Version: 2.3.1
 Text Domain: social_messenger
 Domain Path: /languages
 */
 /**
  * @package WordPress
- * @subpackage Facebook Messenger (Live Chat)
+ * @subpackage Live Chat (Messenger API)
  *
  * @author RapidDev | Polish technology company
  * @copyright Copyright (c) 2018, RapidDev
@@ -24,7 +24,7 @@ Domain Path: /languages
 /* ====================================================================
  * Constant
  * ==================================================================*/
-	define('RAPIDDEV_SOCIAL_MESSENGER_NAME', 'Facebook Messenger (Live Chat)');
+	define('RAPIDDEV_SOCIAL_MESSENGER_NAME', 'Live Chat (Messenger API)');
 	define('RAPIDDEV_SOCIAL_MESSENGER_PATH', plugin_dir_path(__FILE__));
 	define('RAPIDDEV_SOCIAL_MESSENGER_BASENAME', plugin_basename(__FILE__));
 	define('RAPIDDEV_SOCIAL_MESSENGER_WP_VERSION', '4.9.0');

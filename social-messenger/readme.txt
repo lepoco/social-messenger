@@ -1,9 +1,9 @@
-=== Facebook Messenger (Live Chat) ===
+﻿=== Live Chat (Messenger API) ===
 Contributors: RapidDev
 Donate link: https://paypal.me/rapiddev
 Tags: facebook, messenger, chat, polylang, chatbox, livechat, wpml, plugin, rapiddev, rapid, developing, website, live, support, chatbot, adjust, size, responsize, customizer, phone, disable, integration, color
 Requires at least: 4.9.0
-Tested up to: 4.9.8
+Tested up to: 5.1.1
 Requires PHP: 5.4.0
 Stable tag: social-messenger
 License: MIT
@@ -13,10 +13,10 @@ Facebook Messenger on your website. Modify colors, choose languages, integrate w
 
 == Description ==
 
-Facebook Messenger on your website. Modify colors, choose languages, integrate with PolyLang, change positions and much more... It's easy!
-Social Messenger is an easy-to-use plugin that helps ordinary users to start Facebook Messenger on their site.
+Messenger custom chat on your website for free. Modify colors, choose languages, integrate with PolyLang, change positions and much more... It's easy!
+Live Chat (Messenger API) is an easy-to-use plugin that helps ordinary users to start Messenger customer chat on their site.
 
-All you have to do is add the application API, which you can find on the site for developers from Facebook and the ID of your fanpage, which you can find in the Information tab.
+All you have to do is add the ID of your fanpage, which you can find in the Information tab.
 
 NOTE:
 Facebook and Facebook Messenger are registered trademarks of Facebook Inc.
@@ -31,9 +31,9 @@ Facebook and Facebook Messenger are registered trademarks of Facebook Inc.
 
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t need to leave your web browser. To do an automatic install of Facebook Messenger (Live Chat), log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t need to leave your web browser. To do an automatic install of Live Chat (Messenger API), log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
 
-In the search field type Facebook Messenger (Live Chat) and click Search Plugins. Once you’ve found our messenger plugin you can view details about it such as the point release, rating and description. Most importantly of course, you can install it by simply clicking “Install Now”.
+In the search field type Live Chat (Messenger API) and click Search Plugins. Once you’ve found our messenger plugin you can view details about it such as the point release, rating and description. Most importantly of course, you can install it by simply clicking “Install Now”.
 
 = Manual installation =
 
@@ -45,6 +45,15 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 
 == Frequently asked questions ==
+
+= Can I do more with this plug than with the official one? =
+
+Yes of course! You can easily change languages, colors, positions, and quickly adjust all settings from the Customizer, and keep watching how settings affect the chat's appearance.
+
+= What are the most common problems? =
+
+1. We found out that if there is another Facebook plugin on your site that uses, for example, an SDK for comments, then the chat will not display properly.
+2. Facebook blocked preview of changes live when we're in Customizer (iframe).
 
 = Can I change the chat color? =
 
@@ -67,10 +76,6 @@ This plugin contains a full translation into Polish and English.
 The code of your fanpage is at the bottom of the Information section, the link to this section looks like this:
 facebook.com/pg/rapiddev/about/
 
-= How can I find the App ID? =
-
-You must copy it or create it on the site https://developers.facebook.com/
-
 = Do the creators of the plugin collect any information about me? =
 
 No, by adding live chat to your website, you also create your own Api ID. The chat only works on your site.
@@ -86,9 +91,36 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Changelog ==
 
+= 2.3.1 =
+1. An error with the display of the default greeting in Polish has been fixed
+2. Added more bugs to fix later
+
+= 2.3.0 =
+1. Repairing old mistakes
+2. Integration with a newer version of the messenger sdk
+3. Bug fixes
+4. Api key no longer needed
+
+= 2.2.8 =
+1. Bug fixes
+
+= 2.2.7 =
+1. Update of Facebook SDK
+
+= 2.2.6 =
+1. Facebug again accuses us of unlawfully using their name in the banner, so we change it.
+
+= 2.2.5 =
+1. Bug fixes
+
+= 2.2.4 =
+1. Facebug copyright update
+
+= 2.2.3 =
+1. Facebug copyright update
+
 = 2.2.2 =
 1. Bug fixes
-2. Added more bugs to fix later
 
 = 2.2.1 =
 1. Bug fixes
@@ -167,11 +199,6 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Upgrade notice ==
 
-= 2.2.2 =
-Attention, no backward compatibility! All new features should work.
-
-== License ==
-Copyright 2018 RapidDev Leszek Pomianowski
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+= 2.3.1 =
+1. An error with the display of the default greeting in Polish has been fixed
+2. Added more bugs to fix later

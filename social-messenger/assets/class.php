@@ -1,7 +1,7 @@
 <?php defined('ABSPATH') or die('No script kiddies please!');
 /**
  * @package WordPress
- * @subpackage Facebook Messenger (Live Chat)
+ * @subpackage Messenger for Facebook (Live Chat)
  *
  * @author RapidDev | Polish technology company
  * @copyright Copyright (c) 2018, RapidDev
@@ -29,7 +29,7 @@
 					if (get_theme_mod('social_messenger_enable','enable') == 'enable')
 					{
 						add_action('wp_head', array($this,'css'));
-						add_action('wp_footer', array($this,'javascript'));
+						add_action('wp_footer', array($this,'js'));
 					}
 					if (is_admin())
 					{
@@ -67,7 +67,7 @@
 				}
 			}
 
-			public function javascript()
+			public function js()
 			{
 				$display = TRUE;
 
@@ -111,17 +111,58 @@
 				switch (get_theme_mod('social_messenger_minimized', 'default'))
 				{
 					case 'enable':
-						$minimized = 'minimized="true" ';
+						$minimized = ' minimized="true"';
 						break;
 					case 'disable':
-						$minimized = 'minimized="false" ';
+						$minimized = ' minimized="false"';
 						break;
 					default:
 						$minimized = '';
 						break;
 				}
+				//Greeting text for logged in users
+				$greeting_logged = get_theme_mod('social_messenger_hello_logged', '');
+				$greeting_logged_option = get_option('social_messenger_hello_logged', '');
+				if ($greeting_logged != '') {
+					if (function_exists('pll_register_string') && function_exists('pll__')) {
+						if ($greeting_logged_option != $greeting_logged) {
+							update_option('social_messenger_hello_logged', $greeting_logged);
+							pll_register_string('social_messenger', $greeting_logged);
+						}
+						$greeting_logged = ' logged_in_greeting="'.pll__($greeting_logged).'"';
+					}else{
+						$greeting_logged = ' logged_in_greeting="'.$greeting_logged.'"';
+					}
+				}else{
+					$greeting_logged = '';
+				}
+				//Greeting text for logged out in users
+				$greeting_unlogged = get_theme_mod('social_messenger_hello_unlogged', '');
+				$greeting_unlogged_option = get_option('social_messenger_hello_unlogged', '');
+				if ($greeting_unlogged != '') {
+					if (function_exists('pll_register_string') && function_exists('pll__')) {
+						if ($greeting_unlogged_option != $greeting_unlogged) {
+							update_option('social_messenger_hello_unlogged', $greeting_unlogged);
+							pll_register_string('social_messenger', $greeting_unlogged);
+						}
+						$greeting_unlogged = ' logged_out_greeting="'.pll__($greeting_unlogged).'"';
+					}else{
+						$greeting_unlogged = ' logged_out_greeting="'.$greeting_unlogged.'"';
+					}
+				}else{
+					$greeting_unlogged = '';
+				}
 				//JavaScript output
-				$html = '<div class="fb-customerchat" page_id="'.get_theme_mod('social_messenger_page').'"'.$minimized.''.$webhook.' theme_color="'.get_theme_mod('social_messenger_colors', '#4080FF').'"></div><script async="async" defer="defer">window.fbAsyncInit = function() {FB.init({appId : "'.get_theme_mod('social_messenger_api').'",xfbml : true,version : "v2.11"});FB.AppEvents.logPageView();};(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/'.$language.'/sdk.js";fjs.parentNode.insertBefore(js, fjs);}(document,"script","facebook-jssdk"));</script>';
+				//Script
+				$html = '<div id="fb-root"></div><script>window.fbAsyncInit = function(){FB.init({xfbml:true,version:"v3.2"});};(function(d,s,id) {var js,fjs = d.getElementsByTagName(s)[0];if(d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/'.$language.'/sdk/xfbml.customerchat.js";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));</script>';
+				//Html element
+				
+				//Old chat
+				//$html .= '<div class="fb-customerchat" page_id="'.get_theme_mod('social_messenger_page').'"'.$greeting_logged.$greeting_unlogged.$minimized.$webhook.' theme_color="'.get_theme_mod('social_messenger_colors', '#4080FF').'"></div>';
+
+				//New chat
+				$html .= '<div class="fb-customerchat"'.$greeting_logged.$greeting_unlogged.$minimized.$webhook.' attribution=setup_tool page_id="'.get_theme_mod('social_messenger_page').'" theme_color="'.get_theme_mod('social_messenger_colors', '#4080FF').'"></div>';
+				
 				if ($display) {
 					echo $html;
 				}
@@ -137,15 +178,16 @@
 					'social_messenger_colors' => array('color','#4080FF', __('Theme color','social_messenger'),__('This option will change the color of the main button and chat color.','social_messenger')),
 					'social_messenger_language' => array('select','en_GB',__('Language','social_messenger'),__('The list of languages has been established on the basis of Facebook Documentation.','social_messenger'),array('pl_PL'=>'Polish','af_ZA'=>'Afrikaans (SouthAfrica)','af_AF'=>'Afrikaans','ar_AR'=>'Arabic','bn_IN'=>'Bengali','my_MM'=>'Burmese','zh_CN'=>'Chinese (China)','zh_HK'=>'Chinese (HongKong)','zh_TW'=>'Chinese (Taiwan)','hr_HR'=>'Croatian','cs_CZ'=>'Czech','da_DK'=>'Danish','nl_NL'=>'Dutch','en_GB'=>'English (UnitedKingdom)','en_US'=>'English','fi_FI'=>'Finnish','fr_FR'=>'French','de_DE'=>'German','el_GR'=>'Greek','gu_IN'=>'Gujarati','he_IL'=>'Hebrew','hi_IN'=>'Hindi','hu_HU'=>'Hungarian','id_ID'=>'Indonesian','it_IT'=>'Italian','ja_JP'=>'Japanese','ko_KR'=>'Korean','cb_IQ'=>'Kurdish','ms_MY'=>'Malay','ml_IN'=>'Malayalam','mr_IN'=>'Marathi','nb_NO'=>'Norwegian','pt_BR'=>'Portuguese (Brazil)','pt_PT'=>'Portuguese','pa_IN'=>'Punjabi','ro_RO'=>'Romanian','ru_RU'=>'Russian','sk_SK'=>'Slovak','es_LA'=>'Spanish (LatinAmerica)','es_ES'=>'Spanish','sw_KE'=>'Swahili','sv_SE'=>'Swedish','tl_PH'=>'Tagalog','ta_IN'=>'Tamil','te_IN'=>'Telugu','th_TH'=>'Thai','tr_TR'=>'Turkish','ur_PK'=>'Urdu','vi_VN'=>'Vietnamese')),
 					'social_messenger_integration' => array('select','disable',__('Integration','social_messenger'),__('Choose the multilingual plugin that you have installed. WPML does not always work [*sad pepe*]','social_messenger'),array('disable'=>__('Disabled','social_messenger'),'pl'=>'PolyLang','wpml'=>'WPML')),
+					'social_messenger_hello_logged' => array('textarea',NULL,__('Greeting text (logged in users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
+					'social_messenger_hello_unlogged' => array('textarea',NULL,__('Greeting text (logged out users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
 					'social_messenger_pages' => array('dropdown-pages',0,__('Single page mode','social_messenger'),__('If you choose one of these options, the plugin will only be displayed on the selected page.','social_messenger')),
-					'social_messenger_api' => array('text',NULL,__('Api ID','social_messenger'),__('Enter your application id here.','social_messenger'),__('e.g','social_messenger').': 120557035300037'),
 					'social_messenger_page' => array('text',NULL,__('Page ID','social_messenger'),__('Enter your numeric fanpage id here.','social_messenger'),__('e.g','social_messenger').': 1769853790702772'),
 					'social_messenger_webhook' => array('text',NULL,__('Webhook (optional)','social_messenger'),__('Custom string passed to your webhook in messaging_postbacks and messaging_referrals events.','social_messenger'),''),
 				);
 				$_c->add_section('social_messenger',array('title'=>'Facebook Messenger','capability'=>'edit_theme_options','priority'=> 5));
 				$priority = 1;
 				foreach ($options as $name => $option) {
-					$_c->add_setting($name,array('default'=> $option[1],'transport'=>'refresh'));
+					$_c->add_setting($name,array('default'=> $option[1]));
 					switch ($option[0]) {
 						case 'select':
 							$_c->add_control(new WP_Customize_Control($_c,$name,array('label'=>$option[2],'description'=>$option[3],'section'=>'social_messenger','type'=>'select','priority'=>$priority,'choices'=>$option[4])));
@@ -154,6 +196,7 @@
 							$_c->add_control(new WP_Customize_Color_Control($_c,$name,array('label'=>$option[2],'description'=>$option[3],'section'=>'social_messenger','priority'=>$priority)));
 							break;
 						default:
+							if(!isset($option[4])){$option[4] = NULL;}
 							$_c->add_control($name,array('label'=>$option[2],'description'=>$option[3],'section'=>'social_messenger','type'=>$option[0],'priority'=>$priority,'input_attrs'=>array('placeholder'=>$option[4])));
 							break;
 					}
@@ -165,7 +208,6 @@
 			{
 				//Custom links in plugins list
 				array_push($data,'<a href="'.admin_url('/customize.php?autofocus[section]=social_messenger').'">'.__('Settings').'</a>');
-				array_push($data,'<a target="_blank" rel="noopener nofollow" href="https://developers.facebook.com/">Facebook Developers</a>');
 				return $data;
 			}
 
@@ -187,7 +229,7 @@
 				echo '<div class="error notice"><p><strong>'.RAPIDDEV_SOCIAL_MESSENGER_NAME.'</strong><br />'.$message.'</p><p><i>ERROR ID: '.RAPIDDEV_SOCIAL_MESSENGER_ERROR.'</i></p></div>';
 			}
 
-			private function admin_notice($id = 0)
+			private function admin_notice(int $id = 0)
 			{
 				define('RAPIDDEV_SOCIAL_MESSENGER_ERROR', $id);
 				add_action('admin_notices', array($this, 'admin_alert'));
