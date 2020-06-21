@@ -1,13 +1,13 @@
 <?php defined('ABSPATH') or die('No script kiddies please!');
 /*
-Plugin Name: Live Chat (Messenger API)
+Plugin Name: Live Chat (Messenger API) + PolyLang
 Plugin URI: http://wordpress.org/plugins/social-messenger/
 Description: Facebook Messenger on your website. Modify colors, choose languages, integrate with PolyLang, change positions and much more... It's easy!
 Author: RapidDev
 Author URI: https://rdev.cc/
 License: MIT
 License URI: https://opensource.org/licenses/MIT
-Version: 2.3.22
+Version: 2.3.41
 Text Domain: social_messenger
 Domain Path: /languages
 */
@@ -16,7 +16,7 @@ Domain Path: /languages
  * @subpackage Live Chat (Messenger API)
  *
  * @author RapidDev | Polish technology company
- * @copyright Copyright (c) 2018-2019, RapidDev
+ * @copyright Copyright (c) 2018-2020, RapidDev
  * @link https://www.rdev.cc/
  * @license https://opensource.org/licenses/MIT
  */
@@ -24,7 +24,7 @@ Domain Path: /languages
 /* ====================================================================
  * Constant
  * ==================================================================*/
-	define('RDEV_SOCIAL_MESSENGER_NAME', 'Live Chat (Messenger API)');
+	define('RDEV_SOCIAL_MESSENGER_NAME', 'Live Chat (Messenger API) + PolyLang');
 	define('RDEV_SOCIAL_MESSENGER_PATH', plugin_dir_path(__FILE__));
 	define('RDEV_SOCIAL_MESSENGER_BASENAME', plugin_basename(__FILE__));
 	define('RDEV_SOCIAL_MESSENGER_WP_VERSION', '4.9.0');
@@ -33,8 +33,6 @@ Domain Path: /languages
 /* ====================================================================
  * Plugin class
  * ==================================================================*/
-	if (is_file(RDEV_SOCIAL_MESSENGER_PATH.'assets/class.php')) {
-		include(RDEV_SOCIAL_MESSENGER_PATH.'assets/class.php');
-		RDEV_SOCIAL_MESSENGER::init();
-	}
+	require_once RDEV_SOCIAL_MESSENGER_PATH.'assets/class.php';
+	new RDEV_SOCIAL_MESSENGER();
 ?>

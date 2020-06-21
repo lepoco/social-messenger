@@ -1,10 +1,10 @@
-﻿=== Live Chat (Messenger API) ===
+﻿=== Live Chat (Messenger API) + PolyLang ===
 Contributors: RapidDev
 Donate link: https://paypal.me/rapiddev
 Tags: facebook, messenger, chat, polylang, chatbox, livechat, wpml, plugin, rapiddev, rdev, developing, website, live, support, chatbot, adjust, size, responsize, customizer, phone, disable, integration, color
 Requires at least: 4.9.0
-Tested up to: 5.2.3
-Requires PHP: 5.4.0
+Tested up to: 5.4.0
+Requires PHP: 5.6.0
 Stable tag: social-messenger
 License: MIT
 License URI: https://opensource.org/licenses/MIT
@@ -17,9 +17,6 @@ Messenger custom chat on your website for free. Modify colors, choose languages,
 Live Chat (Messenger API) is an easy-to-use plugin that helps ordinary users to start Messenger customer chat on their site.
 
 All you have to do is add the ID of your fanpage, which you can find in the Information tab.
-
-NOTE:
-Facebook and Facebook Messenger are registered trademarks of Facebook Inc.
 
 == Installation ==
 
@@ -101,6 +98,18 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Changelog ==
 
+= 2.3.41 =
+1.Hotfix
+
+= 2.3.40 =
+1. Tested with WordPress 5.4.0
+2. PolyLang for welcome messages finally works!
+3. Corrections in classes and code in general
+4. Added more bugs to fix later
+
+= 2.3.30 =
+1. Tested with WordPress 5.3.1
+
 = 2.3.22 =
 1.Hotfix
 
@@ -116,7 +125,6 @@ You must add your site to trusted in the settings of your fanpage.
 6. Changing some functions to inline
 7. Improved error display function in the WordPress dashboard
 8. Testing with WordPress version 5.2.3
-9. Added more bugs to fix later
 
 = 2.3.1 =
 1. An error with the display of the default greeting in Polish has been fixed

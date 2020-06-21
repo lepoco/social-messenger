@@ -4,11 +4,10 @@
  * @subpackage Live Chat (Messenger API)
  *
  * @author RapidDev | Polish technology company
- * @copyright Copyright (c) 2018-2019, RapidDev
+ * @copyright Copyright (c) 2018-2020, RapidDev
  * @link https://www.rdev.cc/
  * @license https://opensource.org/licenses/MIT
  */
-	//https://www.facebook.com/4GEEKCO/settings/?tab=messenger_platform
 	/**
 	*
 	* RDEV_SOCIAL_MESSENGER
@@ -23,32 +22,20 @@
 		{
 
 			/**
-			* init
-			* Registers class methods in WordPress without assigning to an object.
-			*
-			* @access   public
-			*/
-			public static function init()
-			{
-				return new RDEV_SOCIAL_MESSENGER();
-			}
-
-			/**
-			* __construct
 			* The constructor registers the language domain, actions, filters and other actions.
 			*
 			* @access   public
 			*/
 			public function __construct()
 			{
-
 				//Debug verify
 				//update_option('rdev_social_messenger_verify', FALSE);
-
 
 				add_action('plugins_loaded', function(){
 					load_plugin_textdomain('social_messenger',FALSE,basename(RDEV_SOCIAL_MESSENGER_PATH).'/languages/');
 				});
+
+				$this->UpdateStrings();
 
 				if (is_admin())
 				{
@@ -63,23 +50,22 @@
 
 				if (self::verify_integrity())
 				{
-					add_action('customize_register',array($this,'customizer'));
+					add_action('customize_register',array($this,'Customizer'));
 
 					if (get_theme_mod('social_messenger_enable','enable') == 'enable')
 					{
-						add_action('wp_head', array($this,'head'));
-						add_action('wp_footer', array($this,'footer'));
+						add_action('wp_head', array($this,'Head'));
+						add_action('wp_footer', array($this,'Footer'));
 					}
 				}
 			}
 
 			/**
-			* head
 			* Additional styles and main script for the messenger chat.
 			*
 			* @access   public
 			*/
-			public function head()
+			public function Head() : void
 			{
 				//Single page mode
 				$display = TRUE;
@@ -136,12 +122,11 @@
 			}
 
 			/**
-			* footer
 			* HTML tags for chat.
 			*
 			* @access   public
 			*/
-			public function footer()
+			public function Footer() : void
 			{
 				//Single page mode
 				$display = TRUE;
@@ -171,55 +156,102 @@
 				}
 
 				//Greeting text for logged in users
-				$greeting_logged = get_theme_mod('social_messenger_hello_logged', '');
-				$greeting_logged_option = get_option('social_messenger_hello_logged', '');
-				if ($greeting_logged != '') {
-					if (function_exists('pll_register_string') && function_exists('pll__')) {
-						if ($greeting_logged_option != $greeting_logged) {
-							update_option('social_messenger_hello_logged', $greeting_logged);
-							pll_register_string('social_messenger', $greeting_logged);
-						}
-						$greeting_logged = ' logged_in_greeting="'.pll__($greeting_logged).'"';
-					}else{
-						$greeting_logged = ' logged_in_greeting="'.$greeting_logged.'"';
-					}
-				}else{
-					$greeting_logged = '';
-				}
+				$greeting_logged = self::GreetingLogged();
 
 				//Greeting text for logged out in users
-				$greeting_unlogged = get_theme_mod('social_messenger_hello_unlogged', '');
-				$greeting_unlogged_option = get_option('social_messenger_hello_unlogged', '');
-				if ($greeting_unlogged != '') {
-					if (function_exists('pll_register_string') && function_exists('pll__')) {
-						if ($greeting_unlogged_option != $greeting_unlogged) {
-							update_option('social_messenger_hello_unlogged', $greeting_unlogged);
-							pll_register_string('social_messenger', $greeting_unlogged);
-						}
-						$greeting_unlogged = ' logged_out_greeting="'.pll__($greeting_unlogged).'"';
-					}else{
-						$greeting_unlogged = ' logged_out_greeting="'.$greeting_unlogged.'"';
-					}
-				}else{
-					$greeting_unlogged = '';
-				}
+				$greeting_unlogged = self::GreetingNotLogged();
 
 				$html = '<!-- Social Messenger Plugin for Facebook SDK by RapidDev - https://rdev.cc/social-messenger -->'.PHP_EOL;
-				$html .= '<div id="fb-root"></div>'.PHP_EOL;
-				$html .= '<div class="fb-customerchat" attribution=setup_tool page_id="'.get_theme_mod('social_messenger_page').'" theme_color="'.get_theme_mod('social_messenger_colors', '#4080FF').'"'.$greeting_logged.$greeting_unlogged.$minimized.$webhook.'></div>'.PHP_EOL;
+				$html .= '<div id="fb-root" class="social-messenger-root"></div>'.PHP_EOL;
+				$html .= '<div class="fb-customerchat social-messenger" attribution=setup_tool page_id="'.get_theme_mod('social_messenger_page').'" theme_color="'.get_theme_mod('social_messenger_colors', '#4080FF').'"'.$greeting_logged.$greeting_unlogged.$minimized.$webhook.'></div>'.PHP_EOL;
 
 				if ($display)
 					echo $html;
 			}
 
 			/**
-			* customizer
+			* Registers own strings for translation by PolyLang
+			*
+			* @access   protected
+			*/
+			protected static function UpdateStrings() : void
+			{
+				add_action('init', function()
+				{
+					if(function_exists('pll_register_string'))
+					{
+						$message_logged = get_theme_mod('social_messenger_greetings_logged', '');
+
+						if ($message_logged != '')
+						{
+							pll_register_string('social_messenger_greetings_logged', $message_logged, 'Social Messenger', false);
+						}
+
+						$message_notlogged = get_theme_mod('social_messenger_greetings_notlogged', '');
+
+						if ($message_notlogged != '')
+						{
+							pll_register_string('social_messenger_greetings_notlogged', $message_notlogged, 'Social Messenger', false);
+						}
+					}
+				});
+			}
+
+			/**
+			* Returns defined welcome message for logged users
+			*
+			* @access   protected
+			* @param	object $_c
+			*/
+			protected static function GreetingLogged() : string
+			{
+				$message = get_theme_mod('social_messenger_greetings_logged', '');
+				
+				if (empty($message))
+				{
+					if (function_exists('pll__'))
+					{
+						$message = ' logged_in_greeting="'.pll__($message).'"';
+					}
+					else
+					{
+						$message = ' logged_in_greeting="'.$message.'"';
+					}
+				}
+				return $message;
+			}
+
+			/**
+			* Returns defined welcome message for unlogged users
+			*
+			* @access   protected
+			* @param	object $_c
+			*/
+			protected static function GreetingNotLogged() : string
+			{
+				$message = get_theme_mod('social_messenger_greetings_notlogged', '');
+
+				if (!empty($message))
+				{
+					if (function_exists('pll__'))
+					{
+						$message = ' logged_out_greeting="' . pll__($message) . '"';
+					}
+					else
+					{
+						$message = ' logged_out_greeting="'.$message.'"';
+					}
+				}
+				return $message;
+			}
+
+			/**
 			* This method prepares a customizer menu based on an array.
 			*
 			* @access   public
 			* @param	object $_c
 			*/
-			public function customizer($_c)
+			public function Customizer($_c) : void
 			{
 				$options = array(
 					'social_messenger_enable' => array('select','enable',__('Switch on the Facebook Messenger','social_messenger'),'',array('enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
@@ -227,10 +259,10 @@
 					'social_messenger_phones' => array('select','disable',__('Turn off live chat on phones','social_messenger'),__('Forces hiding live chat with CSS.','social_messenger'),array('enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
 					'social_messenger_position' => array('select','right',__('Chat position on the page','social_messenger'),__('Forces a change of position based on CSS.','social_messenger'),array('right'=>__('On the right side','social_messenger'),'left'=>__('On the left side','social_messenger'),'center'=>__('In the middle','social_messenger'))),
 					'social_messenger_colors' => array('color','#4080FF', __('Theme color','social_messenger'),__('This option will change the color of the main button and chat color.','social_messenger')),
-					'social_messenger_language' => array('select','en_GB',__('Language','social_messenger'),__('The list of languages has been established on the basis of Facebook Documentation.','social_messenger'),array('pl_PL'=>'Polish','af_ZA'=>'Afrikaans (SouthAfrica)','af_AF'=>'Afrikaans','ar_AR'=>'Arabic','bn_IN'=>'Bengali','my_MM'=>'Burmese','zh_CN'=>'Chinese (China)','zh_HK'=>'Chinese (HongKong)','zh_TW'=>'Chinese (Taiwan)','hr_HR'=>'Croatian','cs_CZ'=>'Czech','da_DK'=>'Danish','nl_NL'=>'Dutch','en_GB'=>'English (UnitedKingdom)','en_US'=>'English','fi_FI'=>'Finnish','fr_FR'=>'French','de_DE'=>'German','el_GR'=>'Greek','gu_IN'=>'Gujarati','he_IL'=>'Hebrew','hi_IN'=>'Hindi','hu_HU'=>'Hungarian','id_ID'=>'Indonesian','it_IT'=>'Italian','ja_JP'=>'Japanese','ko_KR'=>'Korean','cb_IQ'=>'Kurdish','ms_MY'=>'Malay','ml_IN'=>'Malayalam','mr_IN'=>'Marathi','nb_NO'=>'Norwegian','pt_BR'=>'Portuguese (Brazil)','pt_PT'=>'Portuguese','pa_IN'=>'Punjabi','ro_RO'=>'Romanian','ru_RU'=>'Russian','sk_SK'=>'Slovak','es_LA'=>'Spanish (LatinAmerica)','es_ES'=>'Spanish','sw_KE'=>'Swahili','sv_SE'=>'Swedish','tl_PH'=>'Tagalog','ta_IN'=>'Tamil','te_IN'=>'Telugu','th_TH'=>'Thai','tr_TR'=>'Turkish','ur_PK'=>'Urdu','vi_VN'=>'Vietnamese')),
+					'social_messenger_language' => array('select','en_GB',__('Language','social_messenger'),__('The list of languages has been established on the basis of Facebook Documentation.','social_messenger'),array('pl_PL'=>'Polish','af_ZA'=>'Afrikaans (South Africa)','af_AF'=>'Afrikaans','ar_AR'=>'Arabic','bn_IN'=>'Bengali','my_MM'=>'Burmese','zh_CN'=>'Chinese (China)','zh_HK'=>'Chinese (Hong Kong)','zh_TW'=>'Chinese (Taiwan)','hr_HR'=>'Croatian','cs_CZ'=>'Czech','da_DK'=>'Danish','nl_NL'=>'Dutch','en_GB'=>'English (United Kingdom)','en_US'=>'English','fi_FI'=>'Finnish','fr_FR'=>'French','de_DE'=>'German','el_GR'=>'Greek','gu_IN'=>'Gujarati','he_IL'=>'Hebrew','hi_IN'=>'Hindi','hu_HU'=>'Hungarian','id_ID'=>'Indonesian','it_IT'=>'Italian','ja_JP'=>'Japanese','ko_KR'=>'Korean','cb_IQ'=>'Kurdish','ms_MY'=>'Malay','ml_IN'=>'Malayalam','mr_IN'=>'Marathi','nb_NO'=>'Norwegian','pt_BR'=>'Portuguese (Brazil)','pt_PT'=>'Portuguese','pa_IN'=>'Punjabi','ro_RO'=>'Romanian','ru_RU'=>'Russian','sk_SK'=>'Slovak','es_LA'=>'Spanish (Latin America)','es_ES'=>'Spanish','sw_KE'=>'Swahili','sv_SE'=>'Swedish','tl_PH'=>'Tagalog','ta_IN'=>'Tamil','te_IN'=>'Telugu','th_TH'=>'Thai','tr_TR'=>'Turkish','ur_PK'=>'Urdu','vi_VN'=>'Vietnamese')),
 					'social_messenger_integration' => array('select','disable',__('Integration','social_messenger'),__('Choose the multilingual plugin that you have installed. WPML does not always work [*sad pepe*]','social_messenger'),array('disable'=>__('Disabled','social_messenger'),'pl'=>'PolyLang','wpml'=>'WPML')),
-					'social_messenger_hello_logged' => array('textarea',NULL,__('Greeting text (logged in users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
-					'social_messenger_hello_unlogged' => array('textarea',NULL,__('Greeting text (logged out users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
+					'social_messenger_greetings_logged' => array('textarea',NULL,__('Greeting text (logged in users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
+					'social_messenger_greetings_notlogged' => array('textarea',NULL,__('Greeting text (logged out users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
 					'social_messenger_pages' => array('dropdown-pages',0,__('Single page mode','social_messenger'),__('If you choose one of these options, the plugin will only be displayed on the selected page.','social_messenger')),
 					'social_messenger_page' => array('text',NULL,__('Page ID','social_messenger'),__('Enter your numeric fanpage id here.','social_messenger'),__('e.g','social_messenger').': 1769853790702772'),
 					'social_messenger_webhook' => array('text',NULL,__('Webhook (optional)','social_messenger'),__('Custom string passed to your webhook in messaging_postbacks and messaging_referrals events.','social_messenger'),''),
@@ -256,13 +288,12 @@
 			}
 
 			/**
-			* admin_notice
 			* Defines an error code and display an alert on the WordPress admin page.
 			*
-			* @access   private
+			* @access   protected
 			* @param	int $id
 			*/
-			private function admin_notice($id = 0)
+			protected function admin_notice($id = 0) : void
 			{
 				define('RDEV_SOCIAL_MESSENGER_ERROR', $id);
 				add_action('admin_notices', function(){
@@ -284,13 +315,12 @@
 			}
 
 			/**
-			* verify_integrity
 			* Checks version compatibility.
 			*
-			* @access   private
+			* @access   protected
 			* @param	int $id
 			*/
-			private function verify_integrity()
+			protected function verify_integrity() : bool
 			{
 				if (get_option('rdev_social_messenger_verify', FALSE))
 					return TRUE;

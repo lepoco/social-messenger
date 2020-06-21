@@ -5,8 +5,8 @@ Facebook Messenger live chat on your website! Very easy to use plugin that adds 
 ![Presentation image](https://ps.w.org/social-messenger/assets/banner-772x250.png)
 
 
-## [Download from the WordPress repository](https://wordpress.org/plugins/social-messenger/)
-#### [Download the latest version from GitHub (2.3.1)](https://github.com/rapiddev/social-messenger/releases/tag/2.3.1)
+#### [Download from the WordPress repository](https://wordpress.org/plugins/social-messenger/)
+#### [Download the latest version from GitHub (2.3.41)](https://github.com/rapiddev/social-messenger/releases/tag/2.3.41)
 
 ## What does this plugin do?
 It makes it easy for you to add a Facebook Messenger live chat to your WordPress site
@@ -30,7 +30,7 @@ All options, description and configuration are available in the Customizer
 Method using FTP
 1. Upload `social-messenger` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Add your APP ID and Facebook page ID in Customizer
+3. Add your Facebook page ID in Customizer
 
 Method using Plugins Manager
 1. Go to Dashboard > Plugins > Add new
@@ -42,6 +42,28 @@ Method using Plugins Manager
 - [x] Polish
 
 ## Update history
+#### 2.3.41
+1.Hotfix
+#### 2.3.4
+1. Tested with WordPress 5.4.0
+2. PolyLang for welcome messages finally works!
+3. Corrections in classes and code in general
+4. Added more bugs to fix later
+#### 2.3.3
+1. Tested with WordPress 5.3.1
+#### 2.3.22
+1.Hotfix
+#### 2.3.21
+1.Hotfix
+#### 2.3.2
+1. Small bug fixes
+2. Preview works again in Customizer
+3. Moving from SDK 3.2 to 4.0
+4. Improving class readability
+5. Correction of error in detecting compatibility of PHP and WordPress versions
+6. Changing some functions to inline
+7. Improved error display function in the WordPress dashboard
+8. Testing with WordPress version 5.2.3
 #### 2.3.1
 1. An error with the display of the default greeting in Polish has been fixed
 2. Added more bugs to fix later
