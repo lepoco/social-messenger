@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Facebook Messenger (Live Chat) 2\n"
-"POT-Creation-Date: 2019-10-10 17:38+0200\n"
-"PO-Revision-Date: 2019-10-10 17:39+0200\n"
+"POT-Creation-Date: 2020-07-31 18:35+0200\n"
+"PO-Revision-Date: 2020-07-31 18:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
 "|| n%100>14) ? 1 : 2);\n"
@@ -27,7 +27,10 @@ msgstr ""
 #: _SVN/tags/2.1.2/assets/class.php:164 _SVN/tags/2.2.1/assets/class.php:133
 #: _SVN/tags/2.2.5/assets/class.php:133 _SVN/tags/2.2.6/assets/class.php:161
 #: _SVN/tags/2.3.0/assets/class.php:174 _SVN/tags/2.3.1/assets/class.php:174
-#: _SVN/trunk/assets/class.php:174 assets/class.php:228
+#: _SVN/tags/2.3.2/assets/class.php:225 _SVN/tags/2.3.21/assets/class.php:225
+#: _SVN/tags/2.3.22/assets/class.php:225 _SVN/tags/2.3.30/assets/class.php:224
+#: _SVN/tags/2.3.40/assets/class.php:264 _SVN/tags/2.3.41/assets/class.php:267
+#: _SVN/trunk/assets/class.php:257 assets/class.php:268
 msgid "Switch on the Facebook Messenger"
 msgstr "Włącz Facebook Messenger"
 
@@ -47,9 +50,18 @@ msgstr "Włącz Facebook Messenger"
 #: _SVN/tags/2.3.0/assets/class.php:174 _SVN/tags/2.3.0/assets/class.php:175
 #: _SVN/tags/2.3.0/assets/class.php:176 _SVN/tags/2.3.1/assets/class.php:174
 #: _SVN/tags/2.3.1/assets/class.php:175 _SVN/tags/2.3.1/assets/class.php:176
-#: _SVN/trunk/assets/class.php:174 _SVN/trunk/assets/class.php:175
-#: _SVN/trunk/assets/class.php:176 assets/class.php:228 assets/class.php:229
-#: assets/class.php:230
+#: _SVN/tags/2.3.2/assets/class.php:225 _SVN/tags/2.3.2/assets/class.php:226
+#: _SVN/tags/2.3.2/assets/class.php:227 _SVN/tags/2.3.21/assets/class.php:225
+#: _SVN/tags/2.3.21/assets/class.php:226 _SVN/tags/2.3.21/assets/class.php:227
+#: _SVN/tags/2.3.22/assets/class.php:225 _SVN/tags/2.3.22/assets/class.php:226
+#: _SVN/tags/2.3.22/assets/class.php:227 _SVN/tags/2.3.30/assets/class.php:224
+#: _SVN/tags/2.3.30/assets/class.php:225 _SVN/tags/2.3.30/assets/class.php:226
+#: _SVN/tags/2.3.40/assets/class.php:264 _SVN/tags/2.3.40/assets/class.php:265
+#: _SVN/tags/2.3.40/assets/class.php:266 _SVN/tags/2.3.41/assets/class.php:267
+#: _SVN/tags/2.3.41/assets/class.php:268 _SVN/tags/2.3.41/assets/class.php:269
+#: _SVN/trunk/assets/class.php:257 _SVN/trunk/assets/class.php:258
+#: _SVN/trunk/assets/class.php:259 assets/class.php:268 assets/class.php:269
+#: assets/class.php:270 assets/class.php:275 assets/class.php:276
 msgid "Enabled"
 msgstr "Włączone"
 
@@ -73,10 +85,22 @@ msgstr "Włączone"
 #: _SVN/tags/2.3.0/assets/class.php:176 _SVN/tags/2.3.0/assets/class.php:180
 #: _SVN/tags/2.3.1/assets/class.php:174 _SVN/tags/2.3.1/assets/class.php:175
 #: _SVN/tags/2.3.1/assets/class.php:176 _SVN/tags/2.3.1/assets/class.php:180
-#: _SVN/trunk/assets/class.php:174 _SVN/trunk/assets/class.php:175
-#: _SVN/trunk/assets/class.php:176 _SVN/trunk/assets/class.php:180
-#: assets/class.php:228 assets/class.php:229 assets/class.php:230
-#: assets/class.php:234
+#: _SVN/tags/2.3.2/assets/class.php:225 _SVN/tags/2.3.2/assets/class.php:226
+#: _SVN/tags/2.3.2/assets/class.php:227 _SVN/tags/2.3.2/assets/class.php:231
+#: _SVN/tags/2.3.21/assets/class.php:225 _SVN/tags/2.3.21/assets/class.php:226
+#: _SVN/tags/2.3.21/assets/class.php:227 _SVN/tags/2.3.21/assets/class.php:231
+#: _SVN/tags/2.3.22/assets/class.php:225 _SVN/tags/2.3.22/assets/class.php:226
+#: _SVN/tags/2.3.22/assets/class.php:227 _SVN/tags/2.3.22/assets/class.php:231
+#: _SVN/tags/2.3.30/assets/class.php:224 _SVN/tags/2.3.30/assets/class.php:225
+#: _SVN/tags/2.3.30/assets/class.php:226 _SVN/tags/2.3.30/assets/class.php:230
+#: _SVN/tags/2.3.40/assets/class.php:264 _SVN/tags/2.3.40/assets/class.php:265
+#: _SVN/tags/2.3.40/assets/class.php:266 _SVN/tags/2.3.40/assets/class.php:270
+#: _SVN/tags/2.3.41/assets/class.php:267 _SVN/tags/2.3.41/assets/class.php:268
+#: _SVN/tags/2.3.41/assets/class.php:269 _SVN/tags/2.3.41/assets/class.php:273
+#: _SVN/trunk/assets/class.php:257 _SVN/trunk/assets/class.php:258
+#: _SVN/trunk/assets/class.php:259 _SVN/trunk/assets/class.php:263
+#: assets/class.php:268 assets/class.php:269 assets/class.php:270
+#: assets/class.php:274 assets/class.php:275 assets/class.php:276
 msgid "Disabled"
 msgstr "Wyłączone"
 
@@ -93,7 +117,10 @@ msgstr ""
 #: _SVN/tags/2.1.2/assets/class.php:166 _SVN/tags/2.2.1/assets/class.php:134
 #: _SVN/tags/2.2.5/assets/class.php:134 _SVN/tags/2.2.6/assets/class.php:162
 #: _SVN/tags/2.3.0/assets/class.php:175 _SVN/tags/2.3.1/assets/class.php:175
-#: _SVN/trunk/assets/class.php:175 assets/class.php:229
+#: _SVN/tags/2.3.2/assets/class.php:226 _SVN/tags/2.3.21/assets/class.php:226
+#: _SVN/tags/2.3.22/assets/class.php:226 _SVN/tags/2.3.30/assets/class.php:225
+#: _SVN/tags/2.3.40/assets/class.php:265 _SVN/tags/2.3.41/assets/class.php:268
+#: _SVN/trunk/assets/class.php:258 assets/class.php:269
 msgid "Minimized (optional)"
 msgstr "Zminimalizowany (opcjonalne)"
 
@@ -102,7 +129,10 @@ msgstr "Zminimalizowany (opcjonalne)"
 #: _SVN/tags/2.1.2/assets/class.php:168 _SVN/tags/2.2.1/assets/class.php:135
 #: _SVN/tags/2.2.5/assets/class.php:135 _SVN/tags/2.2.6/assets/class.php:163
 #: _SVN/tags/2.3.0/assets/class.php:176 _SVN/tags/2.3.1/assets/class.php:176
-#: _SVN/trunk/assets/class.php:176 assets/class.php:230
+#: _SVN/tags/2.3.2/assets/class.php:227 _SVN/tags/2.3.21/assets/class.php:227
+#: _SVN/tags/2.3.22/assets/class.php:227 _SVN/tags/2.3.30/assets/class.php:226
+#: _SVN/tags/2.3.40/assets/class.php:266 _SVN/tags/2.3.41/assets/class.php:269
+#: _SVN/trunk/assets/class.php:259 assets/class.php:270
 msgid "Turn off live chat on phones"
 msgstr "Wyłącz na telefonach"
 
@@ -115,7 +145,10 @@ msgstr "Wymuś ukrycie czatu przy pomocy CSS"
 #: _SVN/tags/2.1.2/assets/class.php:172 _SVN/tags/2.2.1/assets/class.php:137
 #: _SVN/tags/2.2.5/assets/class.php:137 _SVN/tags/2.2.6/assets/class.php:165
 #: _SVN/tags/2.3.0/assets/class.php:178 _SVN/tags/2.3.1/assets/class.php:178
-#: _SVN/trunk/assets/class.php:178 assets/class.php:232
+#: _SVN/tags/2.3.2/assets/class.php:229 _SVN/tags/2.3.21/assets/class.php:229
+#: _SVN/tags/2.3.22/assets/class.php:229 _SVN/tags/2.3.30/assets/class.php:228
+#: _SVN/tags/2.3.40/assets/class.php:268 _SVN/tags/2.3.41/assets/class.php:271
+#: _SVN/trunk/assets/class.php:261 assets/class.php:272
 msgid "Theme color"
 msgstr "Kolor motywu"
 
@@ -140,7 +173,10 @@ msgstr ""
 #: _SVN/tags/2.1.2/assets/class.php:174 _SVN/tags/2.2.1/assets/class.php:138
 #: _SVN/tags/2.2.5/assets/class.php:138 _SVN/tags/2.2.6/assets/class.php:166
 #: _SVN/tags/2.3.0/assets/class.php:179 _SVN/tags/2.3.1/assets/class.php:179
-#: _SVN/trunk/assets/class.php:179 assets/class.php:233
+#: _SVN/tags/2.3.2/assets/class.php:230 _SVN/tags/2.3.21/assets/class.php:230
+#: _SVN/tags/2.3.22/assets/class.php:230 _SVN/tags/2.3.30/assets/class.php:229
+#: _SVN/tags/2.3.40/assets/class.php:269 _SVN/tags/2.3.41/assets/class.php:272
+#: _SVN/trunk/assets/class.php:262 assets/class.php:273
 msgid "Language"
 msgstr "Język"
 
@@ -155,7 +191,10 @@ msgstr "Lista języków została ustalona na podstawie Dokumentacji Facebooka"
 #: _SVN/tags/2.1.2/assets/class.php:170 _SVN/tags/2.2.1/assets/class.php:136
 #: _SVN/tags/2.2.5/assets/class.php:136 _SVN/tags/2.2.6/assets/class.php:164
 #: _SVN/tags/2.3.0/assets/class.php:177 _SVN/tags/2.3.1/assets/class.php:177
-#: _SVN/trunk/assets/class.php:177 assets/class.php:231
+#: _SVN/tags/2.3.2/assets/class.php:228 _SVN/tags/2.3.21/assets/class.php:228
+#: _SVN/tags/2.3.22/assets/class.php:228 _SVN/tags/2.3.30/assets/class.php:227
+#: _SVN/tags/2.3.40/assets/class.php:267 _SVN/tags/2.3.41/assets/class.php:270
+#: _SVN/trunk/assets/class.php:260 assets/class.php:271
 msgid "Chat position on the page"
 msgstr "Pozycja czatu na stronie"
 
@@ -168,7 +207,10 @@ msgstr "Wymusza zmianę pozycji na podstawie CSS"
 #: _SVN/tags/2.1.2/assets/class.php:170 _SVN/tags/2.2.1/assets/class.php:136
 #: _SVN/tags/2.2.5/assets/class.php:136 _SVN/tags/2.2.6/assets/class.php:164
 #: _SVN/tags/2.3.0/assets/class.php:177 _SVN/tags/2.3.1/assets/class.php:177
-#: _SVN/trunk/assets/class.php:177 assets/class.php:231
+#: _SVN/tags/2.3.2/assets/class.php:228 _SVN/tags/2.3.21/assets/class.php:228
+#: _SVN/tags/2.3.22/assets/class.php:228 _SVN/tags/2.3.30/assets/class.php:227
+#: _SVN/tags/2.3.40/assets/class.php:267 _SVN/tags/2.3.41/assets/class.php:270
+#: _SVN/trunk/assets/class.php:260 assets/class.php:271
 msgid "On the right side"
 msgstr "Po prawej stronie"
 
@@ -177,7 +219,10 @@ msgstr "Po prawej stronie"
 #: _SVN/tags/2.1.2/assets/class.php:170 _SVN/tags/2.2.1/assets/class.php:136
 #: _SVN/tags/2.2.5/assets/class.php:136 _SVN/tags/2.2.6/assets/class.php:164
 #: _SVN/tags/2.3.0/assets/class.php:177 _SVN/tags/2.3.1/assets/class.php:177
-#: _SVN/trunk/assets/class.php:177 assets/class.php:231
+#: _SVN/tags/2.3.2/assets/class.php:228 _SVN/tags/2.3.21/assets/class.php:228
+#: _SVN/tags/2.3.22/assets/class.php:228 _SVN/tags/2.3.30/assets/class.php:227
+#: _SVN/tags/2.3.40/assets/class.php:267 _SVN/tags/2.3.41/assets/class.php:270
+#: _SVN/trunk/assets/class.php:260 assets/class.php:271
 msgid "On the left side"
 msgstr "Po lewej stronie"
 
@@ -186,7 +231,10 @@ msgstr "Po lewej stronie"
 #: _SVN/tags/2.1.2/assets/class.php:170 _SVN/tags/2.2.1/assets/class.php:136
 #: _SVN/tags/2.2.5/assets/class.php:136 _SVN/tags/2.2.6/assets/class.php:164
 #: _SVN/tags/2.3.0/assets/class.php:177 _SVN/tags/2.3.1/assets/class.php:177
-#: _SVN/trunk/assets/class.php:177 assets/class.php:231
+#: _SVN/tags/2.3.2/assets/class.php:228 _SVN/tags/2.3.21/assets/class.php:228
+#: _SVN/tags/2.3.22/assets/class.php:228 _SVN/tags/2.3.30/assets/class.php:227
+#: _SVN/tags/2.3.40/assets/class.php:267 _SVN/tags/2.3.41/assets/class.php:270
+#: _SVN/trunk/assets/class.php:260 assets/class.php:271
 msgid "In the middle"
 msgstr "Na środku"
 
@@ -206,7 +254,10 @@ msgstr "Wpisz tutaj id swojej aplikacji"
 #: _SVN/tags/2.1.2/assets/class.php:182 _SVN/tags/2.2.1/assets/class.php:142
 #: _SVN/tags/2.2.5/assets/class.php:142 _SVN/tags/2.2.6/assets/class.php:172
 #: _SVN/tags/2.3.0/assets/class.php:184 _SVN/tags/2.3.1/assets/class.php:184
-#: _SVN/trunk/assets/class.php:184 assets/class.php:238
+#: _SVN/tags/2.3.2/assets/class.php:235 _SVN/tags/2.3.21/assets/class.php:235
+#: _SVN/tags/2.3.22/assets/class.php:235 _SVN/tags/2.3.30/assets/class.php:234
+#: _SVN/tags/2.3.40/assets/class.php:274 _SVN/tags/2.3.41/assets/class.php:277
+#: _SVN/trunk/assets/class.php:267 assets/class.php:280
 msgid "Page ID"
 msgstr "Identyfikator strony"
 
@@ -219,7 +270,10 @@ msgstr "Wpisz tutaj swój numeryczny identyfikator strony społecznościowej"
 #: _SVN/tags/2.1.2/assets/class.php:184 _SVN/tags/2.2.1/assets/class.php:143
 #: _SVN/tags/2.2.5/assets/class.php:143 _SVN/tags/2.2.6/assets/class.php:173
 #: _SVN/tags/2.3.0/assets/class.php:185 _SVN/tags/2.3.1/assets/class.php:185
-#: _SVN/trunk/assets/class.php:185 assets/class.php:239
+#: _SVN/tags/2.3.2/assets/class.php:236 _SVN/tags/2.3.21/assets/class.php:236
+#: _SVN/tags/2.3.22/assets/class.php:236 _SVN/tags/2.3.30/assets/class.php:235
+#: _SVN/tags/2.3.40/assets/class.php:275 _SVN/tags/2.3.41/assets/class.php:278
+#: _SVN/trunk/assets/class.php:268 assets/class.php:281
 msgid "Webhook (optional)"
 msgstr "Webhook (opcjonalne)"
 
@@ -256,23 +310,23 @@ msgstr "Zaloguj się do"
 
 #: _SVN/tags/1.2.0/social_messenger.php:130
 msgid "Open or create a new application"
-msgstr ""
+msgstr "Otwórz lub stwórz nową aplikację"
 
 #: _SVN/tags/1.2.0/social_messenger.php:130
 msgid "On the Settings page you will find your App ID"
-msgstr ""
+msgstr "W ustawieniach swojej strony znajdziesz swoje App ID"
 
 #: _SVN/tags/1.2.0/social_messenger.php:130
 msgid "Now click the button below 'Add Platform'"
-msgstr ""
+msgstr "Teraz kliknij przycisk poniżej \"Dodaj nową platformę\""
 
 #: _SVN/tags/1.2.0/social_messenger.php:130
 msgid "Select 'Website' and then enter the address of this page"
-msgstr ""
+msgstr "Wybierz 'Witryny', a następnie wprowadź adres tej strony"
 
 #: _SVN/tags/1.2.0/social_messenger.php:130
 msgid "Where can I get my page id?"
-msgstr ""
+msgstr "Gdzie znajdę ID mojej strony?"
 
 #: _SVN/tags/1.2.0/social_messenger.php:130
 msgid "To receive your page id you must"
@@ -305,8 +359,11 @@ msgstr ""
 #: _SVN/tags/2.1.1/assets/class.php:98 _SVN/tags/2.1.2/assets/class.php:98
 #: _SVN/tags/2.2.1/assets/class.php:167 _SVN/tags/2.2.5/assets/class.php:167
 #: _SVN/tags/2.2.6/assets/class.php:198 _SVN/tags/2.3.0/assets/class.php:210
-#: _SVN/tags/2.3.1/assets/class.php:210 _SVN/trunk/assets/class.php:210
-#: assets/class.php:58
+#: _SVN/tags/2.3.1/assets/class.php:210 _SVN/tags/2.3.2/assets/class.php:58
+#: _SVN/tags/2.3.21/assets/class.php:58 _SVN/tags/2.3.22/assets/class.php:58
+#: _SVN/tags/2.3.30/assets/class.php:57 _SVN/tags/2.3.40/assets/class.php:55
+#: _SVN/tags/2.3.41/assets/class.php:55 _SVN/trunk/assets/class.php:45
+#: assets/class.php:45
 msgid "Settings"
 msgstr "Ustawienia"
 
@@ -331,7 +388,11 @@ msgid "You need to update your WordPress site"
 msgstr "Musisz zaktualizować swojego WordPress'a"
 
 #: _SVN/tags/1.2.0/social_messenger.php:197
-#: _SVN/tags/1.2.0/social_messenger.php:210 assets/class.php:285
+#: _SVN/tags/1.2.0/social_messenger.php:210
+#: _SVN/tags/2.3.2/assets/class.php:282 _SVN/tags/2.3.21/assets/class.php:282
+#: _SVN/tags/2.3.22/assets/class.php:282 _SVN/tags/2.3.30/assets/class.php:281
+#: _SVN/tags/2.3.40/assets/class.php:320 _SVN/tags/2.3.41/assets/class.php:323
+#: _SVN/trunk/assets/class.php:313 assets/class.php:326
 msgid "ERROR ID"
 msgstr "KOD BŁĘDU"
 
@@ -339,7 +400,10 @@ msgstr "KOD BŁĘDU"
 #: _SVN/tags/2.1.2/assets/class.php:146 _SVN/tags/2.2.1/assets/class.php:177
 #: _SVN/tags/2.2.5/assets/class.php:177 _SVN/tags/2.2.6/assets/class.php:208
 #: _SVN/tags/2.3.0/assets/class.php:220 _SVN/tags/2.3.1/assets/class.php:219
-#: _SVN/trunk/assets/class.php:219 assets/class.php:275
+#: _SVN/tags/2.3.2/assets/class.php:272 _SVN/tags/2.3.21/assets/class.php:272
+#: _SVN/tags/2.3.22/assets/class.php:272 _SVN/tags/2.3.30/assets/class.php:271
+#: _SVN/tags/2.3.40/assets/class.php:310 _SVN/tags/2.3.41/assets/class.php:313
+#: _SVN/trunk/assets/class.php:303 assets/class.php:316
 #, php-format
 msgid ""
 "Your PHP version is outdated. Please, upgrade your PHP to a higher or equal "
@@ -352,7 +416,10 @@ msgstr ""
 #: _SVN/tags/2.1.2/assets/class.php:149 _SVN/tags/2.2.1/assets/class.php:180
 #: _SVN/tags/2.2.5/assets/class.php:180 _SVN/tags/2.2.6/assets/class.php:211
 #: _SVN/tags/2.3.0/assets/class.php:223 _SVN/tags/2.3.1/assets/class.php:222
-#: _SVN/trunk/assets/class.php:222 assets/class.php:278
+#: _SVN/tags/2.3.2/assets/class.php:275 _SVN/tags/2.3.21/assets/class.php:275
+#: _SVN/tags/2.3.22/assets/class.php:275 _SVN/tags/2.3.30/assets/class.php:274
+#: _SVN/tags/2.3.40/assets/class.php:313 _SVN/tags/2.3.41/assets/class.php:316
+#: _SVN/trunk/assets/class.php:306 assets/class.php:319
 #, php-format
 msgid ""
 "Your WordPress version is outdated. Please, upgrade your WordPress to a "
@@ -365,7 +432,10 @@ msgstr ""
 #: _SVN/tags/2.1.2/assets/class.php:152 _SVN/tags/2.2.1/assets/class.php:183
 #: _SVN/tags/2.2.5/assets/class.php:183 _SVN/tags/2.2.6/assets/class.php:214
 #: _SVN/tags/2.3.0/assets/class.php:226 _SVN/tags/2.3.1/assets/class.php:225
-#: _SVN/trunk/assets/class.php:225 assets/class.php:281
+#: _SVN/tags/2.3.2/assets/class.php:278 _SVN/tags/2.3.21/assets/class.php:278
+#: _SVN/tags/2.3.22/assets/class.php:278 _SVN/tags/2.3.30/assets/class.php:277
+#: _SVN/tags/2.3.40/assets/class.php:316 _SVN/tags/2.3.41/assets/class.php:319
+#: _SVN/trunk/assets/class.php:309 assets/class.php:322
 msgid "There was an unidentified error. We should look deeper..."
 msgstr "Pojawił się niezidentyfikowany błąd. Powinniśmy zajrzeć głębiej..."
 
@@ -373,7 +443,10 @@ msgstr "Pojawił się niezidentyfikowany błąd. Powinniśmy zajrzeć głębiej.
 #: _SVN/tags/2.1.2/assets/class.php:166 _SVN/tags/2.2.1/assets/class.php:134
 #: _SVN/tags/2.2.5/assets/class.php:134 _SVN/tags/2.2.6/assets/class.php:162
 #: _SVN/tags/2.3.0/assets/class.php:175 _SVN/tags/2.3.1/assets/class.php:175
-#: _SVN/trunk/assets/class.php:175 assets/class.php:229
+#: _SVN/tags/2.3.2/assets/class.php:226 _SVN/tags/2.3.21/assets/class.php:226
+#: _SVN/tags/2.3.22/assets/class.php:226 _SVN/tags/2.3.30/assets/class.php:225
+#: _SVN/tags/2.3.40/assets/class.php:265 _SVN/tags/2.3.41/assets/class.php:268
+#: _SVN/trunk/assets/class.php:258 assets/class.php:269
 msgid ""
 "Specifies whether the plugin should be minimized or shown. Defaults to true "
 "on desktop and false on mobile browsers."
@@ -385,7 +458,10 @@ msgstr ""
 #: _SVN/tags/2.1.2/assets/class.php:166 _SVN/tags/2.2.1/assets/class.php:134
 #: _SVN/tags/2.2.5/assets/class.php:134 _SVN/tags/2.2.6/assets/class.php:162
 #: _SVN/tags/2.3.0/assets/class.php:175 _SVN/tags/2.3.1/assets/class.php:175
-#: _SVN/trunk/assets/class.php:175 assets/class.php:229
+#: _SVN/tags/2.3.2/assets/class.php:226 _SVN/tags/2.3.21/assets/class.php:226
+#: _SVN/tags/2.3.22/assets/class.php:226 _SVN/tags/2.3.30/assets/class.php:225
+#: _SVN/tags/2.3.40/assets/class.php:265 _SVN/tags/2.3.41/assets/class.php:268
+#: _SVN/trunk/assets/class.php:258 assets/class.php:269
 msgid "Default"
 msgstr "Domyślne"
 
@@ -393,7 +469,10 @@ msgstr "Domyślne"
 #: _SVN/tags/2.1.2/assets/class.php:168 _SVN/tags/2.2.1/assets/class.php:135
 #: _SVN/tags/2.2.5/assets/class.php:135 _SVN/tags/2.2.6/assets/class.php:163
 #: _SVN/tags/2.3.0/assets/class.php:176 _SVN/tags/2.3.1/assets/class.php:176
-#: _SVN/trunk/assets/class.php:176 assets/class.php:230
+#: _SVN/tags/2.3.2/assets/class.php:227 _SVN/tags/2.3.21/assets/class.php:227
+#: _SVN/tags/2.3.22/assets/class.php:227 _SVN/tags/2.3.30/assets/class.php:226
+#: _SVN/tags/2.3.40/assets/class.php:266 _SVN/tags/2.3.41/assets/class.php:269
+#: _SVN/trunk/assets/class.php:259 assets/class.php:270
 msgid "Forces hiding live chat with CSS."
 msgstr "Wymuś ukrycie czatu przy pomocy CSS."
 
@@ -401,7 +480,10 @@ msgstr "Wymuś ukrycie czatu przy pomocy CSS."
 #: _SVN/tags/2.1.2/assets/class.php:170 _SVN/tags/2.2.1/assets/class.php:136
 #: _SVN/tags/2.2.5/assets/class.php:136 _SVN/tags/2.2.6/assets/class.php:164
 #: _SVN/tags/2.3.0/assets/class.php:177 _SVN/tags/2.3.1/assets/class.php:177
-#: _SVN/trunk/assets/class.php:177 assets/class.php:231
+#: _SVN/tags/2.3.2/assets/class.php:228 _SVN/tags/2.3.21/assets/class.php:228
+#: _SVN/tags/2.3.22/assets/class.php:228 _SVN/tags/2.3.30/assets/class.php:227
+#: _SVN/tags/2.3.40/assets/class.php:267 _SVN/tags/2.3.41/assets/class.php:270
+#: _SVN/trunk/assets/class.php:260 assets/class.php:271
 msgid "Forces a change of position based on CSS."
 msgstr "Wymusza zmianę pozycji na podstawie CSS."
 
@@ -409,7 +491,10 @@ msgstr "Wymusza zmianę pozycji na podstawie CSS."
 #: _SVN/tags/2.1.2/assets/class.php:172 _SVN/tags/2.2.1/assets/class.php:137
 #: _SVN/tags/2.2.5/assets/class.php:137 _SVN/tags/2.2.6/assets/class.php:165
 #: _SVN/tags/2.3.0/assets/class.php:178 _SVN/tags/2.3.1/assets/class.php:178
-#: _SVN/trunk/assets/class.php:178 assets/class.php:232
+#: _SVN/tags/2.3.2/assets/class.php:229 _SVN/tags/2.3.21/assets/class.php:229
+#: _SVN/tags/2.3.22/assets/class.php:229 _SVN/tags/2.3.30/assets/class.php:228
+#: _SVN/tags/2.3.40/assets/class.php:268 _SVN/tags/2.3.41/assets/class.php:271
+#: _SVN/trunk/assets/class.php:261 assets/class.php:272
 msgid "This option will change the color of the main button and chat color."
 msgstr "Ta opcja spowoduje zmianę koloru przycisku głównego oraz czatu."
 
@@ -417,7 +502,10 @@ msgstr "Ta opcja spowoduje zmianę koloru przycisku głównego oraz czatu."
 #: _SVN/tags/2.1.2/assets/class.php:174 _SVN/tags/2.2.1/assets/class.php:138
 #: _SVN/tags/2.2.5/assets/class.php:138 _SVN/tags/2.2.6/assets/class.php:166
 #: _SVN/tags/2.3.0/assets/class.php:179 _SVN/tags/2.3.1/assets/class.php:179
-#: _SVN/trunk/assets/class.php:179 assets/class.php:233
+#: _SVN/tags/2.3.2/assets/class.php:230 _SVN/tags/2.3.21/assets/class.php:230
+#: _SVN/tags/2.3.22/assets/class.php:230 _SVN/tags/2.3.30/assets/class.php:229
+#: _SVN/tags/2.3.40/assets/class.php:269 _SVN/tags/2.3.41/assets/class.php:272
+#: _SVN/trunk/assets/class.php:262 assets/class.php:273
 msgid ""
 "The list of languages has been established on the basis of Facebook "
 "Documentation."
@@ -427,7 +515,10 @@ msgstr "Lista języków została ustalona na podstawie Dokumentacji Facebooka."
 #: _SVN/tags/2.1.2/assets/class.php:176 _SVN/tags/2.2.1/assets/class.php:139
 #: _SVN/tags/2.2.5/assets/class.php:139 _SVN/tags/2.2.6/assets/class.php:167
 #: _SVN/tags/2.3.0/assets/class.php:180 _SVN/tags/2.3.1/assets/class.php:180
-#: _SVN/trunk/assets/class.php:180 assets/class.php:234
+#: _SVN/tags/2.3.2/assets/class.php:231 _SVN/tags/2.3.21/assets/class.php:231
+#: _SVN/tags/2.3.22/assets/class.php:231 _SVN/tags/2.3.30/assets/class.php:230
+#: _SVN/tags/2.3.40/assets/class.php:270 _SVN/tags/2.3.41/assets/class.php:273
+#: _SVN/trunk/assets/class.php:263 assets/class.php:274
 msgid "Integration"
 msgstr "Integracja"
 
@@ -435,7 +526,10 @@ msgstr "Integracja"
 #: _SVN/tags/2.1.2/assets/class.php:176 _SVN/tags/2.2.1/assets/class.php:139
 #: _SVN/tags/2.2.5/assets/class.php:139 _SVN/tags/2.2.6/assets/class.php:167
 #: _SVN/tags/2.3.0/assets/class.php:180 _SVN/tags/2.3.1/assets/class.php:180
-#: _SVN/trunk/assets/class.php:180 assets/class.php:234
+#: _SVN/tags/2.3.2/assets/class.php:231 _SVN/tags/2.3.21/assets/class.php:231
+#: _SVN/tags/2.3.22/assets/class.php:231 _SVN/tags/2.3.30/assets/class.php:230
+#: _SVN/tags/2.3.40/assets/class.php:270 _SVN/tags/2.3.41/assets/class.php:273
+#: _SVN/trunk/assets/class.php:263 assets/class.php:274
 msgid ""
 "Choose the multilingual plugin that you have installed. WPML does not always "
 "work [*sad pepe*]"
@@ -447,7 +541,10 @@ msgstr ""
 #: _SVN/tags/2.1.2/assets/class.php:178 _SVN/tags/2.2.1/assets/class.php:140
 #: _SVN/tags/2.2.5/assets/class.php:140 _SVN/tags/2.2.6/assets/class.php:170
 #: _SVN/tags/2.3.0/assets/class.php:183 _SVN/tags/2.3.1/assets/class.php:183
-#: _SVN/trunk/assets/class.php:183 assets/class.php:237
+#: _SVN/tags/2.3.2/assets/class.php:234 _SVN/tags/2.3.21/assets/class.php:234
+#: _SVN/tags/2.3.22/assets/class.php:234 _SVN/tags/2.3.30/assets/class.php:233
+#: _SVN/tags/2.3.40/assets/class.php:273 _SVN/tags/2.3.41/assets/class.php:276
+#: _SVN/trunk/assets/class.php:266 assets/class.php:279
 msgid "Single page mode"
 msgstr "Tryb pojedynczej strony"
 
@@ -455,7 +552,10 @@ msgstr "Tryb pojedynczej strony"
 #: _SVN/tags/2.1.2/assets/class.php:178 _SVN/tags/2.2.1/assets/class.php:140
 #: _SVN/tags/2.2.5/assets/class.php:140 _SVN/tags/2.2.6/assets/class.php:170
 #: _SVN/tags/2.3.0/assets/class.php:183 _SVN/tags/2.3.1/assets/class.php:183
-#: _SVN/trunk/assets/class.php:183 assets/class.php:237
+#: _SVN/tags/2.3.2/assets/class.php:234 _SVN/tags/2.3.21/assets/class.php:234
+#: _SVN/tags/2.3.22/assets/class.php:234 _SVN/tags/2.3.30/assets/class.php:233
+#: _SVN/tags/2.3.40/assets/class.php:273 _SVN/tags/2.3.41/assets/class.php:276
+#: _SVN/trunk/assets/class.php:266 assets/class.php:279
 msgid ""
 "If you choose one of these options, the plugin will only be displayed on the "
 "selected page."
@@ -476,7 +576,10 @@ msgstr "Wpisz tutaj id swojej aplikacji."
 #: _SVN/tags/2.2.5/assets/class.php:141 _SVN/tags/2.2.5/assets/class.php:142
 #: _SVN/tags/2.2.6/assets/class.php:171 _SVN/tags/2.2.6/assets/class.php:172
 #: _SVN/tags/2.3.0/assets/class.php:184 _SVN/tags/2.3.1/assets/class.php:184
-#: _SVN/trunk/assets/class.php:184 assets/class.php:238
+#: _SVN/tags/2.3.2/assets/class.php:235 _SVN/tags/2.3.21/assets/class.php:235
+#: _SVN/tags/2.3.22/assets/class.php:235 _SVN/tags/2.3.30/assets/class.php:234
+#: _SVN/tags/2.3.40/assets/class.php:274 _SVN/tags/2.3.41/assets/class.php:277
+#: _SVN/trunk/assets/class.php:267 assets/class.php:280
 msgid "e.g"
 msgstr "np."
 
@@ -489,7 +592,10 @@ msgstr "Wpisz tutaj swój numeryczny identyfikator strony społecznościowej."
 #: _SVN/tags/2.1.2/assets/class.php:184 _SVN/tags/2.2.1/assets/class.php:143
 #: _SVN/tags/2.2.5/assets/class.php:143 _SVN/tags/2.2.6/assets/class.php:173
 #: _SVN/tags/2.3.0/assets/class.php:185 _SVN/tags/2.3.1/assets/class.php:185
-#: _SVN/trunk/assets/class.php:185 assets/class.php:239
+#: _SVN/tags/2.3.2/assets/class.php:236 _SVN/tags/2.3.21/assets/class.php:236
+#: _SVN/tags/2.3.22/assets/class.php:236 _SVN/tags/2.3.30/assets/class.php:235
+#: _SVN/tags/2.3.40/assets/class.php:275 _SVN/tags/2.3.41/assets/class.php:278
+#: _SVN/trunk/assets/class.php:268 assets/class.php:281
 msgid ""
 "Custom string passed to your webhook in messaging_postbacks and "
 "messaging_referrals events."
@@ -499,22 +605,34 @@ msgstr ""
 
 #: _SVN/tags/2.2.1/assets/class.php:142 _SVN/tags/2.2.5/assets/class.php:142
 #: _SVN/tags/2.2.6/assets/class.php:172 _SVN/tags/2.3.0/assets/class.php:184
-#: _SVN/tags/2.3.1/assets/class.php:184 _SVN/trunk/assets/class.php:184
-#: assets/class.php:238
+#: _SVN/tags/2.3.1/assets/class.php:184 _SVN/tags/2.3.2/assets/class.php:235
+#: _SVN/tags/2.3.21/assets/class.php:235 _SVN/tags/2.3.22/assets/class.php:235
+#: _SVN/tags/2.3.30/assets/class.php:234 _SVN/tags/2.3.40/assets/class.php:274
+#: _SVN/tags/2.3.41/assets/class.php:277 _SVN/trunk/assets/class.php:267
+#: assets/class.php:280
 msgid "Enter your numeric fanpage id here."
 msgstr "Wpisz tutaj swój numeryczny identyfikator fanpage."
 
 #: _SVN/tags/2.2.6/assets/class.php:168 _SVN/tags/2.3.0/assets/class.php:181
-#: _SVN/tags/2.3.1/assets/class.php:181 _SVN/trunk/assets/class.php:181
-#: assets/class.php:235
+#: _SVN/tags/2.3.1/assets/class.php:181 _SVN/tags/2.3.2/assets/class.php:232
+#: _SVN/tags/2.3.21/assets/class.php:232 _SVN/tags/2.3.22/assets/class.php:232
+#: _SVN/tags/2.3.30/assets/class.php:231 _SVN/tags/2.3.40/assets/class.php:271
+#: _SVN/tags/2.3.41/assets/class.php:274 _SVN/trunk/assets/class.php:264
+#: assets/class.php:277
 msgid "Greeting text (logged in users)"
 msgstr "Wiadomość powitalna (dla zalogowanych)"
 
 #: _SVN/tags/2.2.6/assets/class.php:168 _SVN/tags/2.2.6/assets/class.php:169
 #: _SVN/tags/2.3.0/assets/class.php:181 _SVN/tags/2.3.0/assets/class.php:182
 #: _SVN/tags/2.3.1/assets/class.php:181 _SVN/tags/2.3.1/assets/class.php:182
-#: _SVN/trunk/assets/class.php:181 _SVN/trunk/assets/class.php:182
-#: assets/class.php:235 assets/class.php:236
+#: _SVN/tags/2.3.2/assets/class.php:232 _SVN/tags/2.3.2/assets/class.php:233
+#: _SVN/tags/2.3.21/assets/class.php:232 _SVN/tags/2.3.21/assets/class.php:233
+#: _SVN/tags/2.3.22/assets/class.php:232 _SVN/tags/2.3.22/assets/class.php:233
+#: _SVN/tags/2.3.30/assets/class.php:231 _SVN/tags/2.3.30/assets/class.php:232
+#: _SVN/tags/2.3.40/assets/class.php:271 _SVN/tags/2.3.40/assets/class.php:272
+#: _SVN/tags/2.3.41/assets/class.php:274 _SVN/tags/2.3.41/assets/class.php:275
+#: _SVN/trunk/assets/class.php:264 _SVN/trunk/assets/class.php:265
+#: assets/class.php:277 assets/class.php:278
 msgid ""
 "Automatically registers as a PolyLang string, you can translate it in the "
 "settings."
@@ -523,13 +641,32 @@ msgstr ""
 "przetłumaczysz w ustawieniach."
 
 #: _SVN/tags/2.2.6/assets/class.php:169 _SVN/tags/2.3.0/assets/class.php:182
-#: _SVN/tags/2.3.1/assets/class.php:182 _SVN/trunk/assets/class.php:182
-#: assets/class.php:236
+#: _SVN/tags/2.3.1/assets/class.php:182 _SVN/tags/2.3.2/assets/class.php:233
+#: _SVN/tags/2.3.21/assets/class.php:233 _SVN/tags/2.3.22/assets/class.php:233
+#: _SVN/tags/2.3.30/assets/class.php:232 _SVN/tags/2.3.40/assets/class.php:272
+#: _SVN/tags/2.3.41/assets/class.php:275 _SVN/trunk/assets/class.php:265
+#: assets/class.php:278
 msgid "Greeting text (logged out users)"
 msgstr "Wiadomość powitalna (dla niezalogowanych)"
 
+#: assets/class.php:275
+msgid "Add the Prefetch DNS meta flag"
+msgstr "Dodaj flagę meta DNS Prefetch"
+
+#: assets/class.php:275
+msgid "Resolve domain names before resources get requested."
+msgstr "Rozwiązuje nazwy domen przed pobraniem zasobów."
+
+#: assets/class.php:276
+msgid "Add the Preconnect meta flag"
+msgstr "Dodaj flagę meta Preconnect"
+
+#: assets/class.php:276
+msgid "Establish early connections to important third-party origins."
+msgstr "Przyśpiesza łączenie z zasobami firm trzecich."
+
 #. Plugin Name of the plugin/theme
-msgid "Live Chat (Messenger API)"
+msgid "Live Chat (Messenger API) + PolyLang"
 msgstr "Czat na żywo (Messenger API)"
 
 #. Plugin URI of the plugin/theme

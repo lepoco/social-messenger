@@ -98,8 +98,11 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Changelog ==
 
+= 2.4.0 =
+1. Preconnect and DNS-Prefetch meta functions have been added.
+
 = 2.3.41 =
-1.Hotfix
+1. Hotfix
 
 = 2.3.40 =
 1. Tested with WordPress 5.4.0
@@ -111,10 +114,10 @@ You must add your site to trusted in the settings of your fanpage.
 1. Tested with WordPress 5.3.1
 
 = 2.3.22 =
-1.Hotfix
+1. Hotfix
 
 = 2.3.21 =
-1.Hotfix
+1. Hotfix
 
 = 2.3.2 =
 1. Small bug fixes

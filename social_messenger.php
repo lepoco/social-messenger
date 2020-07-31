@@ -7,7 +7,7 @@ Author: RapidDev
 Author URI: https://rdev.cc/
 License: MIT
 License URI: https://opensource.org/licenses/MIT
-Version: 2.3.41
+Version: 2.4.0
 Text Domain: social_messenger
 Domain Path: /languages
 */
