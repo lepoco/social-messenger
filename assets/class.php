@@ -90,7 +90,7 @@
 				switch (get_theme_mod('social_messenger_position', 'right'))
 				{
 					case 'left':
-						$html .= '.fb_dialog, .fb-customerchat * > iframe {left:18pt !important;right: auto;}';
+						$html .= '.fb_dialog, .fb-customerchat * > iframe {left:18pt !important;right: auto;} .fb_dialog_content > iframe {left: 17px;}';
 						break;
 					case 'center':
 						$html .= '.fb_dialog, .fb-customerchat * > iframe {margin: auto;left: 0;right: 0;}';

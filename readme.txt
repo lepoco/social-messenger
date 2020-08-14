@@ -3,7 +3,7 @@ Contributors: RapidDev
 Donate link: https://paypal.me/rapiddev
 Tags: facebook, messenger, chat, polylang, chatbox, livechat, wpml, plugin, rapiddev, rdev, developing, website, live, support, chatbot, adjust, size, responsize, customizer, phone, disable, integration, color
 Requires at least: 4.9.0
-Tested up to: 5.4.2
+Tested up to: 5.5
 Requires PHP: 5.6.0
 Stable tag: social-messenger
 License: MIT
