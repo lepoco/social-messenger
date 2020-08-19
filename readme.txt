@@ -98,6 +98,9 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Changelog ==
 
+= 2.4.1 =
+1. Improved display on the left side and on the center
+
 = 2.4.0 =
 1. Preconnect and DNS-Prefetch meta functions have been added.
 
@@ -236,6 +239,5 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Upgrade notice ==
 
-= 2.3.2 =
-
-A lot of changes. Some options after installation will stop working properly. Check the plugin settings.
+= 2.4.1 =
+1. Improved display on the left side and on the center

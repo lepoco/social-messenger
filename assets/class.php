@@ -90,10 +90,10 @@
 				switch (get_theme_mod('social_messenger_position', 'right'))
 				{
 					case 'left':
-						$html .= '.fb_dialog, .fb-customerchat * > iframe {left:18pt !important;right: auto;} .fb_dialog_content > iframe {left: 17px;}';
+						$html .= '.fb_dialog, .fb-customerchat * > iframe {left:18pt !important;right: auto;} .fb_dialog_content > iframe {left: 35px;}';
 						break;
 					case 'center':
-						$html .= '.fb_dialog, .fb-customerchat * > iframe {margin: auto;left: 0;right: 0;}';
+						$html .= '.fb_dialog, .fb-customerchat iframe {margin: auto !important;left: 0 !important;right: 0 !important;} .fb_dialog_content {display:flex;justify-content:center;align-items:center;} .fb_dialog_content > iframe {margin: auto !important;left: auto;right: auto !important;}';
 						break;
 				}
 
