@@ -74,13 +74,31 @@
 					if($single_page_mode != get_queried_object_id())
 						$display = FALSE;
 
+				//Language
+				$language = get_theme_mod('social_messenger_language', 'en_US');
+				switch (get_theme_mod('social_messenger_integration', 'disable'))
+				{
+					case 'pl': //Polylang
+						if (function_exists('pll_current_language'))
+						{
+							$language = pll_current_language('locale');
+						}
+						break;
+					case 'wpml': //WPML
+						if (defined('ICL_LANGUAGE_CODE'))
+						{
+							$language = ICL_LANGUAGE_CODE.'_'.strtoupper(ICL_LANGUAGE_CODE);
+						}
+						break;
+				}
+
 				//Preconnect / Prefetch
 				$pre = NULL;
 				if (get_theme_mod('social_messenger_prefetch', 'disable') == 'enable')
 					$pre .= "<link rel=\"dns-prefetch\" href=\"//connect.facebook.net/\" >" . PHP_EOL;
 
 				if (get_theme_mod('social_messenger_preconnect', 'disable') == 'enable')
-					$pre .= "<link rel=\"preload\" href=\"//connect.facebook.net/\" >" . PHP_EOL;
+					$pre .= "<link rel=\"preload\" href=\"//connect.facebook.net/" . $language . "/sdk/xfbml.customerchat.js\" as=\"script\" >" . PHP_EOL;
 
 				if($display)
 					echo $pre;
@@ -105,26 +123,8 @@
 				if ($html != NULL)
 					$html = '<style>'.$html.'</style>'.PHP_EOL;
 
-				//Language
-				$language = get_theme_mod('social_messenger_language', 'en_US');
-				switch (get_theme_mod('social_messenger_integration', 'disable'))
-				{
-					case 'pl': //Polylang
-						if (function_exists('pll_current_language'))
-						{
-							$language = pll_current_language('locale');
-						}
-						break;
-					case 'wpml': //WPML
-						if (defined('ICL_LANGUAGE_CODE'))
-						{
-							$language = ICL_LANGUAGE_CODE.'_'.strtoupper(ICL_LANGUAGE_CODE);
-						}
-						break;
-				}
-
 				$html .= '<script>';
-				$html .= 'window.fbAsyncInit = function(){FB.init({xfbml:true,version:"v4.0"});};';
+				$html .= 'window.fbAsyncInit = function(){FB.init({xfbml:true,version:"v8.0"});};';
 				$html .= '(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/'.$language.'/sdk/xfbml.customerchat.js";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));';
 				$html .= '</script>'.PHP_EOL;
 
@@ -218,7 +218,7 @@
 			{
 				$message = get_theme_mod('social_messenger_greetings_logged', '');
 				
-				if (empty($message))
+				if ( trim( $message ) != '' )
 				{
 					if (function_exists('pll__'))
 					{
@@ -242,7 +242,7 @@
 			{
 				$message = get_theme_mod('social_messenger_greetings_notlogged', '');
 
-				if (!empty($message))
+				if ( trim( $message ) != '' )
 				{
 					if (function_exists('pll__'))
 					{

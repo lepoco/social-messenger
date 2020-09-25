@@ -98,6 +98,9 @@ You must add your site to trusted in the settings of your fanpage.
 
 == Changelog ==
 
+= 2.4.2 =
+1. Fixed bug with welcome message
+
 = 2.4.1 =
 1. Improved display on the left side and on the center
 
