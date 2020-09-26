@@ -117,13 +117,18 @@
 
 				//Force hide chat on phones
 				if (get_theme_mod('social_messenger_phones', 'disable') == 'enable')
-					$html .= '@media(max-width:770px){.fb_dialog{display: none !important;}}';
+					$html .= '@media(max-width:991px){.social-messenger-root{display: none !important;}}';
 
 				//If any html has been added, display styles
 				if ($html != NULL)
 					$html = '<style>'.$html.'</style>'.PHP_EOL;
 
 				$html .= '<script>';
+				if(get_theme_mod('social_messenger_hooks', 'enable') == 'enable')
+				{
+					$html .= 'document.addEventListener("DOMContentLoaded",function(){jQuery(function(e){e(document.body).on("click",".socialmessenger-show",function(e){e.preventDefault(),FB.CustomerChat.show()}),e(document.body).on("click",".socialmessenger-hide",function(e){e.preventDefault(),FB.CustomerChat.hide()}),e(document.body).on("click",".socialmessenger-showDialog",function(e){e.preventDefault(),FB.CustomerChat.showDialog()}),e(document.body).on("click",".socialmessenger-hideDialog",function(e){e.preventDefault(),FB.CustomerChat.hideDialog()})})});';
+				}
+
 				$html .= 'window.fbAsyncInit = function(){FB.init({xfbml:true,version:"v8.0"});};';
 				$html .= '(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/'.$language.'/sdk/xfbml.customerchat.js";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));';
 				$html .= '</script>'.PHP_EOL;
@@ -140,72 +145,71 @@
 			public function Footer() : void
 			{
 				//Single page mode
-				$display = TRUE;
 				$single_page_mode = get_theme_mod('social_messenger_pages', 0);
 				if ($single_page_mode != 0)
 					if($single_page_mode != get_queried_object_id())
-						$display = FALSE;
+						return;
 
-				//Additional webhook
-				if (get_theme_mod('social_messenger_webhook', NULL) != NULL)
-					$webhook = ' ref="'.$webhook.'"';
-				else
-					$webhook = '';
+				//Hide on selected page
+				$page_exclude = get_theme_mod('social_messenger_exclude', 0);
+					if ($page_exclude != 0)
+						if($page_exclude == get_queried_object_id())
+							return;
 
-				//Additional minimized option
-				switch (get_theme_mod('social_messenger_minimized', 'default'))
-				{
-					case 'enable':
-						$minimized = ' minimized="true"';
-						break;
-					case 'disable':
-						$minimized = ' minimized="false"';
-						break;
-					default:
-						$minimized = '';
-						break;
-				}
+				//Chat display mode
+				$display_option = get_theme_mod('social_messenger_display', 'show');
+				$display_mode = ' greeting_dialog_display="' . $display_option . '"';
 
-				//Greeting text for logged in users
-				$greeting_logged = self::GreetingLogged();
+				//Chat display delay
+				$delay = '';
+				if($display_option == 'fade')
+					$delay = ' greeting_dialog_delay="' . get_theme_mod('social_messenger_delay', 0) . '"';
 
-				//Greeting text for logged out in users
-				$greeting_unlogged = self::GreetingNotLogged();
-
-				$html = '<!-- Social Messenger Plugin for Facebook SDK by RapidDev - https://rdev.cc/social-messenger -->'.PHP_EOL;
+				$html = '<!-- Social Messenger Plugin for Facebook SDK by RapidDev - https://rdev.cc/ -->'.PHP_EOL;
 				$html .= '<div id="fb-root" class="social-messenger-root"></div>'.PHP_EOL;
-				$html .= '<div class="fb-customerchat social-messenger" attribution=setup_tool page_id="'.get_theme_mod('social_messenger_page').'" theme_color="'.get_theme_mod('social_messenger_colors', '#4080FF').'"'.$greeting_logged.$greeting_unlogged.$minimized.$webhook.'></div>'.PHP_EOL;
+				$html .= '<div class="fb-customerchat social-messenger"';
+				
+				$html .= ' page_id="'.get_theme_mod('social_messenger_page').'"';
+				$html .= ' theme_color="'.get_theme_mod('social_messenger_colors', '#4080FF').'"';
+				$html .= ' greeting_dialog_display="' . get_theme_mod('social_messenger_display', 'show') . '"';
+				
+				$html .= self::GreetingLogged();
+				$html .= self::GreetingNotLogged();
+				$html .= self::FadeChat();
+				$html .= self::SetWebhook();
 
-				if ($display)
-					echo $html;
+				$html .= '>'; //end customerchat container
+				$html .= '</div>'.PHP_EOL;
+
+				echo $html;
 			}
 
 			/**
-			* Registers own strings for translation by PolyLang
+			* Decides whether to delay the display of the chat
 			*
 			* @access   protected
 			*/
-			protected static function UpdateStrings() : void
+			protected static function FadeChat() : string
 			{
-				add_action('init', function()
-				{
-					if(function_exists('pll_register_string'))
-					{
-						$message_logged = get_theme_mod('social_messenger_greetings_logged', '');
+				$display_option = get_theme_mod('social_messenger_display', 'show');
 
-						if ($message_logged != '')
-						{
-							pll_register_string('social_messenger_greetings_logged', $message_logged, 'Social Messenger', false);
-						}
+				if($display_option == 'fade')
+					return ' greeting_dialog_delay="' . get_theme_mod('social_messenger_delay', 0) . '"';
+				else
+					return '';
+			}
 
-						$message_notlogged = get_theme_mod('social_messenger_greetings_notlogged', '');
-
-						if ($message_notlogged != '')
-						{
-							pll_register_string('social_messenger_greetings_notlogged', $message_notlogged, 'Social Messenger', false);
-						}
-					}
-				});
+			/**
+			* Optional webhook to forward in a message to the application
+			*
+			* @access   protected
+			*/
+			protected function SetWebhook() : string
+			{
+				if (get_theme_mod('social_messenger_webhook', NULL) != NULL)
+					return ' ref="'.$webhook.'"';
+				else
+					return '';
 			}
 
 			/**
@@ -257,6 +261,34 @@
 			}
 
 			/**
+			* Registers own strings for translation by PolyLang
+			*
+			* @access   protected
+			*/
+			protected static function UpdateStrings() : void
+			{
+				add_action('init', function()
+				{
+					if(function_exists('pll_register_string'))
+					{
+						$message_logged = get_theme_mod('social_messenger_greetings_logged', '');
+
+						if ($message_logged != '')
+						{
+							pll_register_string('social_messenger_greetings_logged', $message_logged, 'Social Messenger', false);
+						}
+
+						$message_notlogged = get_theme_mod('social_messenger_greetings_notlogged', '');
+
+						if ($message_notlogged != '')
+						{
+							pll_register_string('social_messenger_greetings_notlogged', $message_notlogged, 'Social Messenger', false);
+						}
+					}
+				});
+			}
+
+			/**
 			* This method prepares a customizer menu based on an array.
 			*
 			* @access   public
@@ -264,19 +296,31 @@
 			*/
 			public function Customizer($_c) : void
 			{
+				//If not in customizer mode, do not load additional libraries for optimization
+				if (!is_customize_preview())
+					return;
+
+				//Add-ons for adding non-existent types of controls
+				if(is_file(RDEV_SOCIAL_MESSENGER_PATH . '/assets/helpers.php'))
+					require_once RDEV_SOCIAL_MESSENGER_PATH . '/assets/helpers.php';
+
+
 				$options = array(
+					'social_messenger_html1' => array('html', null, null, null, '<div style="width:100%; display: flex;justify-content:center;align-items:center;"><img style="max-width:100px;" alt="Social Messenger logo" src="https://ps.w.org/social-messenger/assets/icon-256x256.png?rev=1950998"/></div><div style="margin-top:15px;"><strong>Social Messenger (Live Chat)</strong><br/><i>by RapidDev</i><br/><a href="https://rdev.cc/" target="_blank" rel="noopener">https://rdev.cc/</a></div>'),
 					'social_messenger_enable' => array('select','enable',__('Switch on the Facebook Messenger','social_messenger'),'',array('enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
-					'social_messenger_minimized' => array('select','default',__('Minimized (optional)','social_messenger'),__('Specifies whether the plugin should be minimized or shown. Defaults to true on desktop and false on mobile browsers.','social_messenger'),array('default'=>__('Default','social_messenger'),'enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
-					'social_messenger_phones' => array('select','disable',__('Turn off live chat on phones','social_messenger'),__('Forces hiding live chat with CSS.','social_messenger'),array('enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
-					'social_messenger_position' => array('select','right',__('Chat position on the page','social_messenger'),__('Forces a change of position based on CSS.','social_messenger'),array('right'=>__('On the right side','social_messenger'),'left'=>__('On the left side','social_messenger'),'center'=>__('In the middle','social_messenger'))),
+					'social_messenger_display' => array('select','show',__('Display mode','social_messenger'),__('Sets how the greeting dialog will be displayed','social_messenger'),array('show'=>__('Shown and remains open','social_messenger'),'hide'=>__('Hidden until a user click','social_messenger'),'fade'=>__('Shown briefly after the delay','social_messenger'))),
+					'social_messenger_delay' => array('number',0,__('Delay (Optional)','social_messenger'),__('Sets the number of seconds of delay before the greeting dialog is shown after the plugin is loaded.','social_messenger')),
 					'social_messenger_colors' => array('color','#4080FF', __('Theme color','social_messenger'),__('This option will change the color of the main button and chat color.','social_messenger')),
 					'social_messenger_language' => array('select','en_GB',__('Language','social_messenger'),__('The list of languages has been established on the basis of Facebook Documentation.','social_messenger'),array('pl_PL'=>'Polish','af_ZA'=>'Afrikaans (South Africa)','af_AF'=>'Afrikaans','ar_AR'=>'Arabic','bn_IN'=>'Bengali','my_MM'=>'Burmese','zh_CN'=>'Chinese (China)','zh_HK'=>'Chinese (Hong Kong)','zh_TW'=>'Chinese (Taiwan)','hr_HR'=>'Croatian','cs_CZ'=>'Czech','da_DK'=>'Danish','nl_NL'=>'Dutch','en_GB'=>'English (United Kingdom)','en_US'=>'English','fi_FI'=>'Finnish','fr_FR'=>'French','de_DE'=>'German','el_GR'=>'Greek','gu_IN'=>'Gujarati','he_IL'=>'Hebrew','hi_IN'=>'Hindi','hu_HU'=>'Hungarian','id_ID'=>'Indonesian','it_IT'=>'Italian','ja_JP'=>'Japanese','ko_KR'=>'Korean','cb_IQ'=>'Kurdish','ms_MY'=>'Malay','ml_IN'=>'Malayalam','mr_IN'=>'Marathi','nb_NO'=>'Norwegian','pt_BR'=>'Portuguese (Brazil)','pt_PT'=>'Portuguese','pa_IN'=>'Punjabi','ro_RO'=>'Romanian','ru_RU'=>'Russian','sk_SK'=>'Slovak','es_LA'=>'Spanish (Latin America)','es_ES'=>'Spanish','sw_KE'=>'Swahili','sv_SE'=>'Swedish','tl_PH'=>'Tagalog','ta_IN'=>'Tamil','te_IN'=>'Telugu','th_TH'=>'Thai','tr_TR'=>'Turkish','ur_PK'=>'Urdu','vi_VN'=>'Vietnamese')),
+					'social_messenger_hooks' => array('select','enable',__('Enable control classes','social_messenger'),__('By using control classes, you can pin them to buttons or links and control the chat this way.'),array('enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
+					'social_messenger_html2' => array('html', null, null, null, '<div><p>To open or close an entire chat, add a class to a button or link:</p><code>.socialmessenger-show<br/>.socialmessenger-hide</code><p>To open or close chat dialog, add a class to a button or link:</p><code>.socialmessenger-showDialog<br/>.socialmessenger-hideDialog</code></div>'),
 					'social_messenger_integration' => array('select','disable',__('Integration','social_messenger'),__('Choose the multilingual plugin that you have installed. WPML does not always work [*sad pepe*]','social_messenger'),array('disable'=>__('Disabled','social_messenger'),'pl'=>'PolyLang','wpml'=>'WPML')),
 					'social_messenger_prefetch' => array('select','disable',__('Add the Prefetch DNS meta flag','social_messenger'),__('Resolve domain names before resources get requested.','social_messenger'),array('enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
 					'social_messenger_preconnect' => array('select','disable',__('Add the Preconnect meta flag','social_messenger'),__('Establish early connections to important third-party origins.','social_messenger'),array('enable'=>__('Enabled','social_messenger'),'disable'=>__('Disabled','social_messenger'))),
 					'social_messenger_greetings_logged' => array('textarea',NULL,__('Greeting text (logged in users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
 					'social_messenger_greetings_notlogged' => array('textarea',NULL,__('Greeting text (logged out users)','social_messenger'),__('Automatically registers as a PolyLang string, you can translate it in the settings.','social_messenger')),
 					'social_messenger_pages' => array('dropdown-pages',0,__('Single page mode','social_messenger'),__('If you choose one of these options, the plugin will only be displayed on the selected page.','social_messenger')),
+					'social_messenger_exclude' => array('dropdown-pages',0,__('Disable on the selected page','social_messenger'),__('If you select a page (e.g. order page), the chat will not appear there.','social_messenger')),
 					'social_messenger_page' => array('text',NULL,__('Page ID','social_messenger'),__('Enter your numeric fanpage id here.','social_messenger'),__('e.g','social_messenger').': 1769853790702772'),
 					'social_messenger_webhook' => array('text',NULL,__('Webhook (optional)','social_messenger'),__('Custom string passed to your webhook in messaging_postbacks and messaging_referrals events.','social_messenger'),''),
 				);
@@ -290,6 +334,10 @@
 							break;
 						case 'color':
 							$_c->add_control(new WP_Customize_Color_Control($_c,$name,array('label'=>$option[2],'description'=>$option[3],'section'=>'social_messenger','priority'=>$priority)));
+							break;
+						case 'html':
+							if( class_exists('WP_Spectrum_HTML') )
+								$_c->add_control(new WP_Spectrum_HTML($_c,$name,array('label'=>$option[2],'description'=>$option[3],'section'=>'social_messenger','priority'=>$priority, 'content' => $option[4])));
 							break;
 						default:
 							if(!isset($option[4])){$option[4] = NULL;}
@@ -365,4 +413,3 @@
 			}
 		}
 	}
-?>

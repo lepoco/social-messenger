@@ -1,12 +1,12 @@
 # Facebook Messenger for WordPress
-[Created with love in Poland by RapidDev](http://rapiddev.pl/)<br />
+[Created with love in Poland by RapidDev](http://rdev.cc/)<br />
 Facebook Messenger live chat on your website! Very easy to use plugin that adds chat on your WordPress site. It supports language change and is integrated with PolyLang. In addition, you can change the position and display of the chatbox
 
 ![Presentation image](https://ps.w.org/social-messenger/assets/banner-772x250.png)
 
 
 #### [Download from the WordPress repository](https://wordpress.org/plugins/social-messenger/)
-#### [Download the latest version from GitHub (2.3.41)](https://github.com/rapiddev/social-messenger/releases/tag/2.3.41)
+#### [Download the latest version from GitHub (2.4.6)](https://github.com/rapiddev/social-messenger/releases/tag/2.4.6)
 
 ## What does this plugin do?
 It makes it easy for you to add a Facebook Messenger live chat to your WordPress site
@@ -16,6 +16,8 @@ All options, description and configuration are available in the Customizer
 
 ## What options are available?
 - [x] Page ID
+- [x] Display delay
+- [x] Hidden by default
 - [x] Minimizing chat
 - [x] Webhooks
 - [x] Own welcome message for logged in (and not) users
@@ -23,6 +25,7 @@ All options, description and configuration are available in the Customizer
 - [x] The ability to change the chat position on the site
 - [x] The option to disable chat for the mobile version
 - [x] Single Page mode
+- [x] Hiding on a selected page
 - [x] Change of colors
 - [x] Integration with PolyLang and WPML
 
@@ -42,6 +45,24 @@ Method using Plugins Manager
 - [x] Polish
 
 ## Update history
+#### 2.4.6
+1. Improved display methods according to Facebook documentation
+2. Adding a new option - delay the chat display
+3. Fixes in the code
+4. Class methods separation for greater readability
+#### 2.4.5
+1. Hide chat on selected page
+#### 2.4.4
+1. Improve hiding on phones
+2. New control classes allow you to open and close a chat using buttons and links that have the appropriate css
+#### 2.4.3
+1. Fixed preload value
+#### 2.4.2
+1. Fixed bug with welcome message
+#### 2.4.1
+1. Improved display on the left side and on the center
+#### 2.4.0
+1. Preconnect and DNS-Prefetch meta functions have been added.
 #### 2.3.41
 1.Hotfix
 #### 2.3.4

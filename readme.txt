@@ -3,7 +3,7 @@ Contributors: RapidDev
 Donate link: https://paypal.me/rapiddev
 Tags: facebook, messenger, chat, polylang, chatbox, livechat, wpml, plugin, rapiddev, rdev, developing, website, live, support, chatbot, adjust, size, responsize, customizer, phone, disable, integration, color
 Requires at least: 4.9.0
-Tested up to: 5.5
+Tested up to: 5.5.1
 Requires PHP: 5.6.0
 Stable tag: social-messenger
 License: MIT
@@ -22,9 +22,9 @@ All you have to do is add the ID of your fanpage, which you can find in the Info
 
 = Minimum Requirements =
 
-* PHP version 5.4.0 or greater (PHP 7.2 or greater is recommended)
+* PHP version 5.4.0 or greater (PHP 7.4 or greater is recommended)
 * MySQL version 5.0 or greater (MySQL 5.6 or greater is recommended)
-* WordPress version 4.9.0 or greater (WordPress 5.2.3 or greater is recommended)
+* WordPress version 4.9.0 or greater (WordPress 5.5.1 or greater is recommended)
 
 = Automatic installation =
 
@@ -46,6 +46,20 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 = Can I do more with this plug than with the official one? =
 
 Yes of course! You can easily change languages, colors, positions, and quickly adjust all settings from the Customizer, and keep watching how settings affect the chat's appearance.
+
+= Can I hide or delay my chat? =
+
+Yes! With the help of the built-in options, you can hide it by default - or show it after a few seconds.
+
+= Can I open chat with the button or javascript? =
+
+You can use the built-in functions! If you add one of the classes to your button/href:
+'socialmessenger-show',
+'socialmessenger-hide',
+'socialmessenger-showDialog'
+'socialmessenger-hideDialog'
+
+you can use them to open and close the chat. [jQuery required]
 
 = What are the most common problems? =
 
@@ -97,6 +111,22 @@ You must add your site to trusted in the settings of your fanpage.
 2. This is how the Customizer menu looks like
 
 == Changelog ==
+
+= 2.4.6 =
+1. Improved display methods according to Facebook documentation
+2. Adding a new option - delay the chat display
+3. Fixes in the code
+4. Class methods separation for greater readability
+
+= 2.4.5 =
+1. Hide chat on selected page
+
+= 2.4.4 =
+1. Improve hiding on phones
+2. New control classes allow you to open and close a chat using buttons and links that have the appropriate css
+
+= 2.4.3 =
+1. Fixed preload value
 
 = 2.4.2 =
 1. Fixed bug with welcome message

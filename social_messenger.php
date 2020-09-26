@@ -7,7 +7,7 @@ Author: RapidDev
 Author URI: https://rdev.cc/
 License: MIT
 License URI: https://opensource.org/licenses/MIT
-Version: 2.4.2
+Version: 2.4.6
 Text Domain: social_messenger
 Domain Path: /languages
 */
@@ -35,4 +35,3 @@ Domain Path: /languages
  * ==================================================================*/
 	require_once RDEV_SOCIAL_MESSENGER_PATH.'assets/class.php';
 	new RDEV_SOCIAL_MESSENGER();
-?>
