@@ -1,5 +1,5 @@
-# Facebook Messenger for WordPress
-[Created with love in Poland by RapidDev](http://rdev.cc/)<br />
+# Live Chat (Messenger API) + PolyLang
+[Created with ![heart](http://i.imgur.com/oXJmdtz.gif) in Poland by RapidDev](https://rdev.cc/)<br />
 Facebook Messenger live chat on your website! Very easy to use plugin that adds chat on your WordPress site. It supports language change and is integrated with PolyLang. In addition, you can change the position and display of the chatbox
 
 ![Presentation image](https://ps.w.org/social-messenger/assets/banner-772x250.png)
