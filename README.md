@@ -5,8 +5,7 @@ Facebook Messenger live chat on your website! Very easy to use plugin that adds 
 ![Presentation image](https://ps.w.org/social-messenger/assets/banner-772x250.png)
 
 
-#### [Download from the WordPress repository](https://wordpress.org/plugins/social-messenger/)
-#### [Download the latest version from GitHub (2.4.6)](https://github.com/rapiddev/social-messenger/releases/tag/2.4.6)
+#### [Download latest version from the WordPress repository](https://wordpress.org/plugins/social-messenger/)
 
 ## What does this plugin do?
 It makes it easy for you to add a Facebook Messenger live chat to your WordPress site
